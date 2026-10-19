@@ -86,7 +86,7 @@ function setStatus(t){$('#status').textContent=t}
 async function gh(path, opts = {}) {
   const r = await fetch(`https://api.github.com/repos/${REPO}${path ? '/' + path : ''}`, {
     ...opts,
-    headers: {Accept:'application/vnd.github+json', Authorization:`Bearer ${token}`, ...(opts.headers||{})}
+    headers: {Accept:'application/vnd.github+json', ...(token ? {Authorization:`Bearer ${token}`} : {}), ...(opts.headers||{})}
   });
   if (!r.ok) {
     const j = await r.json().catch(()=>({}));
@@ -97,7 +97,20 @@ async function gh(path, opts = {}) {
 const b64enc = str => { const b = new TextEncoder().encode(str); let s=''; for (let i=0;i<b.length;i+=0x8000) s+=String.fromCharCode(...b.subarray(i,i+0x8000)); return btoa(s); };
 const b64dec = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g,'')), c => c.charCodeAt(0)));
 
+function needToken() {
+  if (token) return false;
+  alert('للحفظ أو رفع الملفات يجب الاتصال أولًا بحسابك على GitHub (مرة واحدة فقط).\nسأفتح لك تبويب «الاتصال» الآن.');
+  tab = 'settings'; $('#dlg').open && $('#dlg').close(); render();
+  return true;
+}
 async function loadFile(name, fallback) {
+  if (!token) { // المستودع عام: القراءة بلا رمز
+    const r = await fetch(`${RAW}${DIR}${name}?v=${Date.now()}`, {cache:'no-store'});
+    if (r.ok) files[name] = {data: await r.json(), sha: null};
+    else if (fallback !== undefined) files[name] = {data: fallback, sha: null};
+    else throw new Error('تعذّر تحميل ' + name);
+    return files[name].data;
+  }
   try {
     const j = await gh(`contents/${DIR}${name}?ref=${BRANCH}`);
     const text = j.content ? b64dec(j.content) : await (await fetch(j.download_url)).text();
@@ -109,6 +122,7 @@ async function loadFile(name, fallback) {
   return files[name].data;
 }
 async function saveFile(name, msg) {
+  if (needToken()) throw new Error('no token');
   setStatus('جارٍ الحفظ…');
   const f = files[name];
   const body = {message: `لوحة التحكم: ${msg}`, content: b64enc(JSON.stringify(f.data, null, 1) + '\n'), branch: BRANCH};
@@ -125,6 +139,7 @@ async function saveFile(name, msg) {
   }
 }
 async function uploadMedia(file, folder) {
+  if (needToken()) throw new Error('no token');
   if (file.size > 45 * 1024 * 1024) throw new Error('حجم الملف أكبر من ٤٥ ميغابايت');
   const ext = (file.name.split('.').pop() || 'bin').toLowerCase().replace(/[^a-z0-9]/g,'');
   const base = file.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g,'').slice(0,40) || 'file';
@@ -141,12 +156,12 @@ const TABS = [
   ['items','الأدعية والزيارات'],['occasions','المناسبات'],['media','الصور والفيديو'],['voices','الأصوات'],
   ['daily','الإشعار اليومي'],['social','التواصل'],['competition','المسابقة'],['donations','التبرعات'],['settings','الاتصال']
 ];
-let tab = token ? 'items' : 'settings';
+let tab = 'items';
 function renderTabs(){ $('#tabs').innerHTML = TABS.map(([k,t])=>`<button type="button" class="${k===tab?'on':''}" data-k="${k}">${t}</button>`).join('');
   $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.k;render()}); }
 async function render(){ renderTabs(); const v=$('#view');
-  if (tab !== 'settings' && !token) { tab='settings'; renderTabs(); }
-  try { await VIEWS[tab](v); } catch(e){ v.innerHTML=`<div class="card"><h2>تعذّر التحميل</h2><p class="muted">${esc(e.message)}</p></div>`; setStatus('غير متصل'); }
+  const warn = (!token && tab !== 'settings') ? `<div class="card" style="border:2px solid #C9B26B;background:#FFF9E8"><b>لم تتصل بعد</b> — يمكنك التصفّح، لكن الحفظ ورفع الأصوات يحتاجان اتصالًا لمرة واحدة. <button class="btn" type="button" id="goConn" style="margin-inline-start:8px">اتصل الآن</button></div>` : '';
+  try { await VIEWS[tab](v); if (warn) { v.insertAdjacentHTML('afterbegin', warn); $('#goConn').onclick=()=>{tab='settings';render()}; } } catch(e){ v.innerHTML=`<div class="card"><h2>تعذّر التحميل</h2><p class="muted">${esc(e.message)}</p></div>`; setStatus('غير متصل'); }
 }
 
 function dialog(title, bodyHtml, onSave, {saveText='حفظ', extra=''}={}) {
@@ -163,7 +178,7 @@ const VIEWS = {
     v.innerHTML = `<div class="card"><h2>الاتصال بالمستودع</h2>
       <p class="muted">تحفظ اللوحة المحتوى في ملفات التطبيق على GitHub، ويجلبها التطبيق تلقائيًا عند فتحه. تحتاج مرة واحدة إلى «رمز دخول» من حسابك:</p>
       <ol class="steps muted">
-        <li>افتح <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">github.com/settings/personal-access-tokens/new</a></li>
+        <li>اضغط هذا الزر (يجب أن تكون مسجّل الدخول في GitHub): <a class="btn" target="_blank" href="https://github.com/settings/personal-access-tokens/new?name=yousra-admin&description=Yousra%20dashboard&target_name=BassemT10&expires_in=366&contents=write">إنشاء رمز الدخول</a></li>
         <li>الاسم: <code>yousra-admin</code> — المدة: سنة. في «Repository access» اختر <b>Only select repositories</b> ثم <code>${REPO}</code></li>
         <li>في «Permissions» ← «Repository permissions» ← <b>Contents</b>: اختر <b>Read and write</b></li>
         <li>اضغط «Generate token» وانسخ الرمز والصقه هنا. يُحفظ الرمز في هذا المتصفح فقط.</li>
@@ -178,7 +193,7 @@ const VIEWS = {
   },
 
   async items(v){
-    const items = await loadFile('items.json'); setStatus('متصل ✓');
+    const items = await loadFile('items.json'); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     let cat = v._cat || 'all', q = v._q || '';
     const draw = () => {
       const list = items.filter(i => (cat==='all'||i.category===cat) && (!q || (i.title+i.when+i.id).includes(q)));
@@ -236,7 +251,7 @@ const VIEWS = {
   },
 
   async occasions(v){
-    const occ = await loadFile('occasions.json', []); setStatus('متصل ✓');
+    const occ = await loadFile('occasions.json', []); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const draw=()=>{ occ.sort((a,b)=>a.month-b.month||a.day-b.day);
       $('#occList').innerHTML = occ.map((o,i)=>`<div class="item"><div class="grow"><div class="title">${esc(o.title)}</div><div class="muted">${o.day} ${HMONTHS[o.month-1]}</div></div>
         <button class="btn sec" data-e="${i}">تعديل</button><button class="btn danger" data-d="${i}">حذف</button></div>`).join('') || '<div class="empty">لا توجد مناسبات</div>';
@@ -254,7 +269,7 @@ const VIEWS = {
   },
 
   async media(v){
-    const imgs = await loadFile('images.json', []); setStatus('متصل ✓');
+    const imgs = await loadFile('images.json', []); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const MC={ayat:'آيات',duas:'أدعية',occasions:'مناسبات',adhkar:'أذكار'};
     const draw=()=>{ $('#mList').innerHTML = imgs.map((m,i)=>`<div class="item">${m.type==='video'?'<div style="width:64px;height:64px;border-radius:10px;background:var(--g);color:#fff;display:grid;place-items:center">▶</div>':`<img src="${esc(m.asset)}" style="width:64px;height:64px;object-fit:cover;border-radius:10px">`}
         <div class="grow"><div class="title">${esc(MC[m.category]||m.category)}</div><div class="muted" dir="ltr" style="text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(m.asset)}</div></div>
@@ -272,7 +287,7 @@ const VIEWS = {
   },
 
   async voices(v){
-    const d = await loadFile('voices.json', {adhan:[],quran:[],notificationSoundsInstalled:false}); setStatus('متصل ✓');
+    const d = await loadFile('voices.json', {adhan:[],quran:[],notificationSoundsInstalled:false}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const sec=(key,title,hint)=>`<div class="card"><div class="bar"><div style="flex:1"><h2>${title}</h2><div class="muted">${hint}</div></div>
       <label class="btn sec" style="margin:0">⬆ رفع ملف<input type="file" accept="audio/*" data-up="${key}" hidden></label><button class="btn sec" data-add="${key}">+ برابط</button></div>
       <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">
@@ -288,7 +303,7 @@ const VIEWS = {
   },
 
   async daily(v){
-    const d = await loadFile('daily.json', {ayat:[],hadith:[],adhkar:[]}); setStatus('متصل ✓');
+    const d = await loadFile('daily.json', {ayat:[],hadith:[],adhkar:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const box=(k,t,h)=>`<label>${t}</label><div class="muted">${h}</div><textarea class="quran" id="d_${k}" rows="8">${esc((d[k]||[]).join('\n'))}</textarea>`;
     v.innerHTML=`<div class="card"><h2>محتوى الإشعار اليومي</h2><p class="muted">كل سطر عنصر واحد. يصل للمستخدم واحد منها يوميًا حسب ما اختاره.</p>
       ${box('ayat','الآيات','اكتب الآية ثم | ثم اسم السورة ورقم الآية. مثال: إِنَّ مَعَ الْعُسْرِ يُسْرًا|الشرح ٦')}
@@ -298,7 +313,7 @@ const VIEWS = {
   },
 
   async social(v){
-    const d = await loadFile('social.json', {title:'',links:[]}); setStatus('متصل ✓');
+    const d = await loadFile('social.json', {title:'',links:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const get=p=>(d.links.find(l=>l.platform===p)||{}).url||'';
     v.innerHTML=`<div class="card"><h2>حسابات التواصل</h2><p class="muted">تظهر في آخر الصفحة الرئيسية. اترك الخانة فارغة لإخفاء المنصة.</p>
       <label>العنوان فوق الأيقونات</label><input id="s_title" value="${esc(d.title)}" placeholder="تابعونا على مواقع التواصل">
@@ -308,7 +323,7 @@ const VIEWS = {
   },
 
   async competition(v){
-    const c = await loadFile('competition.json', {active:false,title:'',description:'',endsAt:'',registerUrl:'',terms:[]}); setStatus('متصل ✓');
+    const c = await loadFile('competition.json', {active:false,title:'',description:'',endsAt:'',registerUrl:'',terms:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     v.innerHTML=`<div class="card"><h2>المسابقة</h2>
       <label><input type="checkbox" id="c_active" ${c.active?'checked':''} style="width:auto"> المسابقة مفتوحة الآن</label>
       <label>عنوان المسابقة</label><input id="c_title" value="${esc(c.title)}">
@@ -321,7 +336,7 @@ const VIEWS = {
   },
 
   async donations(v){
-    const d = await loadFile('donations.json', {organization:'',campaigns:[]}); setStatus('متصل ✓');
+    const d = await loadFile('donations.json', {organization:'',campaigns:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     v.innerHTML=`<div class="card"><h2>التبرعات</h2><p class="muted">لا تفعّل التبرعات إلا عبر جهة مرخّصة وصفحة دفع آمنة (Stripe أو PayPal أو صفحة الجهة).</p>
       <label>اسم الجهة المرخّصة</label><input id="g_org" value="${esc(d.organization)}">
       <div class="list" id="campList"></div><div class="bar" style="margin-top:12px"><button class="btn sec" id="addC">+ حملة</button><button class="btn" id="saveG">حفظ</button></div></div>`;
