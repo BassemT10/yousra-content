@@ -292,7 +292,7 @@ const VIEWS = {
       <label class="btn sec" style="margin:0">⬆ رفع ملف<input type="file" accept="audio/*" data-up="${key}" hidden></label><button class="btn sec" data-add="${key}">+ برابط</button></div>
       <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">
         <button class="btn sec" data-play="${esc(x.url)}">▶</button><button class="btn danger" data-del="${key}" data-i="${i}">✕</button></div>`).join('')||'<div class="muted">لا يوجد بعد</div>'}</div></div>`;
-    v.innerHTML = sec('adhan','أصوات الأذان','يختار منها المستخدم صوت الأذان داخل التطبيق.') + sec('quran','قرّاء القرآن','رابط المجلد الذي فيه ملفات السور (001.mp3 … 114.mp3)، مثل روابط everyayah.')
+    v.innerHTML = sec('adhan','أصوات الأذان','يختار منها المستخدم صوت الأذان داخل التطبيق.') + sec('quran','قرّاء القرآن','أضِف القارئ «برابط» بصيغة ملفات الآيات، مثل: https://everyayah.com/data/اسم_القارئ/{sss}{aaa}.mp3 — حيث {sss} رقم السورة و{aaa} رقم الآية. اختر اسم المجلد من everyayah.com/recitations_pages.html')
       + `<button class="btn" id="saveV">حفظ الأصوات</button>`;
     v.querySelectorAll('[data-k]').forEach(e=>e.oninput=()=>d[e.dataset.k][+e.dataset.i][e.dataset.f]=e.value);
     v.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{(d[b.dataset.add]=d[b.dataset.add]||[]).push({name:'',url:''});VIEWS.voices(v)});
