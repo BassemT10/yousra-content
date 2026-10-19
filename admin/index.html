@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة تحكم يُسرى</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0B3D2E;--g7:#14583F;--g1:#E6EFEA;--gold:#B08D57;--cream:#FBFAF6;--ink:#17201C;--sub:#5B635F;--bd:#E1E4E0;--page:#F4F5F3;--red:#B3261E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;font-size:15px}
+header{background:var(--g);color:var(--cream);padding:14px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:5}
+header .name{font-family:'Aref Ruqaa',serif;font-size:30px;line-height:1}
+header .t{opacity:.8;font-size:13px}
+header .sp{flex:1}
+#status{font-size:13px;color:#9CC7B2}
+main{max-width:1180px;margin:0 auto;padding:18px}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+nav button{border:1px solid var(--bd);background:#fff;border-radius:999px;padding:8px 16px;font:inherit;cursor:pointer;color:var(--ink)}
+nav button.on{background:var(--g);border-color:var(--g);color:#fff}
+.card{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:18px;margin-bottom:14px}
+h2{margin:0 0 4px;font-size:20px}
+.muted{color:var(--sub);font-size:13px;line-height:1.7}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+input,select,textarea{width:100%;font:inherit;border:1px solid #CFD5D0;border-radius:12px;padding:10px 12px;background:#fff;color:var(--ink)}
+textarea{min-height:120px;line-height:1.8}
+textarea.quran{font-family:'Amiri',serif;font-size:19px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--g7);outline-offset:0;border-color:transparent}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.btn{border:0;background:var(--g);color:#fff;border-radius:12px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.btn.sec{background:var(--g1);color:var(--g)}
+.btn.danger{background:#FBE9E7;color:var(--red)}
+.btn:disabled{opacity:.5;cursor:default}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.item{display:flex;align-items:center;gap:12px;border:1px solid var(--bd);border-radius:14px;padding:10px 14px;background:#fff}
+.item .grow{flex:1;min-width:0}
+.item .title{font-weight:600}
+.pill{display:inline-block;background:var(--g1);color:var(--g);border-radius:999px;padding:2px 10px;font-size:12px;margin-inline-start:6px}
+.pill.gold{background:#F3ECDF;color:#7A5E31}
+.voices .v{display:grid;grid-template-columns:1fr 2fr auto auto;gap:8px;align-items:center;margin-bottom:8px}
+dialog{border:0;border-radius:22px;padding:0;width:min(820px,96vw);max-height:92vh}
+dialog::backdrop{background:rgba(10,26,21,.55)}
+dialog .head{background:var(--g);color:#fff;padding:14px 20px;display:flex;align-items:center}
+dialog .body{padding:4px 20px 20px;overflow:auto;max-height:calc(92vh - 120px)}
+dialog .foot{padding:12px 20px;border-top:1px solid var(--bd);display:flex;gap:8px;justify-content:flex-start;background:#fff}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;opacity:0;transition:.25s;pointer-events:none;z-index:20}
+.toast.show{opacity:1}
+.empty{padding:26px;text-align:center;color:var(--sub)}
+.steps li{margin-bottom:6px;line-height:1.8}
+code{background:var(--g1);padding:1px 6px;border-radius:6px;direction:ltr;display:inline-block}
+</style>
+</head>
+<body>
+<header>
+  <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><path d="M95 20 C90 24 88 32 88 42 C88 66 70 80 50 80 C30 80 13.78 65.65 11.08 43.82 C10.25 37.1 11.9 24.94 16 17.16 C15.36 29.97 15.5 33 17 37 C18 33 19.5 30 21.5 27 C21.5 52 34 68 50 68 C66 68 78 56 78 42 C78 29 85 21 95 20 Z" fill="#FBFAF6"/><path d="M-124 -67 -117 -66Q-58 -52 -15.5 -30.0Q27 -8 59 32Q63 29 70.0 24.0Q77 19 82 28Q87 38 92.5 47.0Q98 56 98 69Q97 83 88 91Q97 120 97 140Q97 142 97.0 142.5Q97 143 97 145Q97 163 87.5 176.5Q78 190 60 190Q41 190 23.0 177.0Q5 164 -6.5 144.5Q-18 125 -18 107Q-18 86 -5.0 74.0Q8 62 21 54Q-4 32 -36.5 12.5Q-69 -7 -98 -26L-120 -40Q-134 -49 -134 -56Q-134 -67 -124 -67ZM33 124Q36 129 42 130Q47 132 48.0 127.0Q49 122 49 117V113Q45 116 41.0 118.5Q37 121 33 124Z" transform="translate(79.08 12.66) scale(0.06 -0.06)" fill="#FBFAF6" fill-rule="evenodd"/><path d="M69 81.5 L76.5 89 L69 96.5 L61.5 89 Z M84 81.5 L91.5 89 L84 96.5 L76.5 89 Z" fill="#B08D57"/></svg>
+  <div><div class="name">يُسرى</div><div class="t">لوحة التحكم</div></div>
+  <div class="sp"></div>
+  <div id="status">غير متصل</div>
+</header>
+<main>
+  <nav id="tabs"></nav>
+  <div id="view"></div>
+</main>
+<dialog id="dlg"><form method="dialog" id="dlgForm"><div class="head"><b id="dlgTitle"></b></div><div class="body" id="dlgBody"></div><div class="foot" id="dlgFoot"></div></form></dialog>
+<div class="toast" id="toast"></div>
+<script>
+// ===== إعدادات المستودع =====
+const REPO = 'BassemT10/yousra-content', BRANCH = 'main', DIR = 'content/';
+const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+const CATS = {days:'أدعية الأيام',occasions:'أدعية المناسبات',munajat:'المناجاة',ziyarat:'الزيارات',taqibat:'تعقيبات الصلاة',qadr:'ليالي القدر',amaal_month:'أعمال الشهور',friday:'أعمال الجمعة',other:'أخرى'};
+const WEEKDAYS = {'':'—',6:'السبت',7:'الأحد',1:'الاثنين',2:'الثلاثاء',3:'الأربعاء',4:'الخميس',5:'الجمعة'};
+const HMONTHS = ['محرم','صفر','ربيع الأول','ربيع الآخر','جمادى الأولى','جمادى الآخرة','رجب','شعبان','رمضان','شوال','ذو القعدة','ذو الحجة'];
+const PLATFORMS = {instagram:'إنستغرام',tiktok:'تيك توك',youtube:'يوتيوب',x:'إكس',facebook:'فيسبوك',telegram:'تيليغرام',whatsapp:'واتساب',snapchat:'سناب شات'};
+
+let token = '';
+try { token = localStorage.getItem('yousra_token') || ''; } catch (e) {}
+const files = {}; // name -> {data, sha}
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2600)}
+function setStatus(t){$('#status').textContent=t}
+
+// ===== GitHub =====
+async function gh(path, opts = {}) {
+  const r = await fetch(`https://api.github.com/repos/${REPO}${path ? '/' + path : ''}`, {
+    ...opts,
+    headers: {Accept:'application/vnd.github+json', Authorization:`Bearer ${token}`, ...(opts.headers||{})}
+  });
+  if (!r.ok) {
+    const j = await r.json().catch(()=>({}));
+    throw new Error(r.status === 401 ? 'رمز الدخول غير صحيح أو منتهي' : r.status === 403 || r.status === 404 ? 'الرمز لا يملك صلاحية الكتابة على المستودع' : (j.message || r.status));
+  }
+  return r.json();
+}
+const b64enc = str => { const b = new TextEncoder().encode(str); let s=''; for (let i=0;i<b.length;i+=0x8000) s+=String.fromCharCode(...b.subarray(i,i+0x8000)); return btoa(s); };
+const b64dec = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g,'')), c => c.charCodeAt(0)));
+
+async function loadFile(name, fallback) {
+  try {
+    const j = await gh(`contents/${DIR}${name}?ref=${BRANCH}`);
+    const text = j.content ? b64dec(j.content) : await (await fetch(j.download_url)).text();
+    files[name] = {data: JSON.parse(text), sha: j.sha};
+  } catch (e) {
+    if (String(e.message).includes('صلاحية') && fallback !== undefined) files[name] = {data: fallback, sha: null};
+    else throw e;
+  }
+  return files[name].data;
+}
+async function saveFile(name, msg) {
+  setStatus('جارٍ الحفظ…');
+  const f = files[name];
+  const body = {message: `لوحة التحكم: ${msg}`, content: b64enc(JSON.stringify(f.data, null, 1) + '\n'), branch: BRANCH};
+  if (f.sha) body.sha = f.sha;
+  try {
+    const j = await gh(`contents/${DIR}${name}`, {method:'PUT', body: JSON.stringify(body)});
+    f.sha = j.content.sha;
+    setStatus('متصل ✓');
+    toast('تم الحفظ — يظهر في التطبيق خلال دقائق');
+  } catch (e) {
+    setStatus('فشل الحفظ');
+    alert('لم يتم الحفظ: ' + e.message + (String(e.message).includes('sha') ? '\nأعد تحميل الصفحة ثم حاول مرة أخرى.' : ''));
+    throw e;
+  }
+}
+async function uploadMedia(file, folder) {
+  if (file.size > 45 * 1024 * 1024) throw new Error('حجم الملف أكبر من ٤٥ ميغابايت');
+  const ext = (file.name.split('.').pop() || 'bin').toLowerCase().replace(/[^a-z0-9]/g,'');
+  const base = file.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g,'').slice(0,40) || 'file';
+  const path = `media/${folder}/${Date.now()}-${base}.${ext}`;
+  const data = await new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = rej; r.readAsDataURL(file); });
+  setStatus('جارٍ رفع الملف…');
+  await gh(`contents/${path}`, {method:'PUT', body: JSON.stringify({message:`لوحة التحكم: رفع ${file.name}`, content:data, branch:BRANCH})});
+  setStatus('متصل ✓');
+  return RAW + path;
+}
+
+// ===== الواجهة =====
+const TABS = [
+  ['items','الأدعية والزيارات'],['occasions','المناسبات'],['media','الصور والفيديو'],['voices','الأصوات'],
+  ['daily','الإشعار اليومي'],['social','التواصل'],['competition','المسابقة'],['donations','التبرعات'],['settings','الاتصال']
+];
+let tab = token ? 'items' : 'settings';
+function renderTabs(){ $('#tabs').innerHTML = TABS.map(([k,t])=>`<button type="button" class="${k===tab?'on':''}" data-k="${k}">${t}</button>`).join('');
+  $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.k;render()}); }
+async function render(){ renderTabs(); const v=$('#view');
+  if (tab !== 'settings' && !token) { tab='settings'; renderTabs(); }
+  try { await VIEWS[tab](v); } catch(e){ v.innerHTML=`<div class="card"><h2>تعذّر التحميل</h2><p class="muted">${esc(e.message)}</p></div>`; setStatus('غير متصل'); }
+}
+
+function dialog(title, bodyHtml, onSave, {saveText='حفظ', extra=''}={}) {
+  $('#dlgTitle').textContent = title; $('#dlgBody').innerHTML = bodyHtml;
+  $('#dlgFoot').innerHTML = `<button class="btn" value="save" id="dlgSave">${saveText}</button><button class="btn sec" value="cancel" formnovalidate>إلغاء</button>${extra}`;
+  const d = $('#dlg'); d.showModal();
+  $('#dlgSave').onclick = async (ev) => { ev.preventDefault(); const btn=ev.target; btn.disabled=true;
+    try { const ok = await onSave($('#dlgBody')); if (ok !== false) d.close(); } catch(e){ } finally { btn.disabled=false; } };
+  return $('#dlgBody');
+}
+
+const VIEWS = {
+  async settings(v){
+    v.innerHTML = `<div class="card"><h2>الاتصال بالمستودع</h2>
+      <p class="muted">تحفظ اللوحة المحتوى في ملفات التطبيق على GitHub، ويجلبها التطبيق تلقائيًا عند فتحه. تحتاج مرة واحدة إلى «رمز دخول» من حسابك:</p>
+      <ol class="steps muted">
+        <li>افتح <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">github.com/settings/personal-access-tokens/new</a></li>
+        <li>الاسم: <code>yousra-admin</code> — المدة: سنة. في «Repository access» اختر <b>Only select repositories</b> ثم <code>${REPO}</code></li>
+        <li>في «Permissions» ← «Repository permissions» ← <b>Contents</b>: اختر <b>Read and write</b></li>
+        <li>اضغط «Generate token» وانسخ الرمز والصقه هنا. يُحفظ الرمز في هذا المتصفح فقط.</li>
+      </ol>
+      <label>رمز الدخول</label><input id="tok" type="password" value="${esc(token)}" placeholder="github_pat_…" dir="ltr">
+      <div class="bar" style="margin-top:12px"><button class="btn" id="saveTok">اتصال</button><button class="btn danger" id="clearTok">مسح الرمز</button></div></div>`;
+    $('#saveTok').onclick = async ()=>{ token = $('#tok').value.trim();
+      try { const r = await gh(''); if (!r.permissions || !r.permissions.push) throw new Error('الرمز لا يملك صلاحية الكتابة');
+        try{localStorage.setItem('yousra_token',token)}catch(e){} setStatus('متصل ✓'); toast('تم الاتصال'); tab='items'; render(); }
+      catch(e){ alert(e.message); } };
+    $('#clearTok').onclick = ()=>{ token=''; try{localStorage.removeItem('yousra_token')}catch(e){} $('#tok').value=''; setStatus('غير متصل'); };
+  },
+
+  async items(v){
+    const items = await loadFile('items.json'); setStatus('متصل ✓');
+    let cat = v._cat || 'all', q = v._q || '';
+    const draw = () => {
+      const list = items.filter(i => (cat==='all'||i.category===cat) && (!q || (i.title+i.when+i.id).includes(q)));
+      $('#itemsList').innerHTML = list.length ? list.map(i=>`<div class="item"><div class="grow"><div class="title">${esc(i.title)}
+          <span class="pill">${esc(CATS[i.category]||i.category)}</span>${(i.segments||[]).length?'':'<span class="pill gold">بلا نص</span>'}${(i.voices||[]).length?`<span class="pill">🔊 ${i.voices.length}</span>`:''}</div>
+          <div class="muted">${esc(i.when||'')} ${i.weekday?'· '+WEEKDAYS[i.weekday]:''} ${i.group?'· مجموعة '+esc(i.group):''}</div></div>
+          <button class="btn sec" data-e="${esc(i.id)}">تعديل</button><button class="btn danger" data-d="${esc(i.id)}">حذف</button></div>`).join('') : '<div class="empty">لا توجد عناصر</div>';
+      $('#itemsList').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>editItem(items.find(i=>i.id===b.dataset.e)));
+      $('#itemsList').querySelectorAll('[data-d]').forEach(b=>b.onclick=async()=>{ const it=items.find(i=>i.id===b.dataset.d);
+        if(!confirm(`حذف «${it.title}» من التطبيق؟`))return; items.splice(items.indexOf(it),1); await saveFile('items.json',`حذف ${it.title}`); draw(); });
+    };
+    const editItem = (it) => {
+      const isNew = !it; it = it || {id:'', title:'', category: cat==='all'?'days':cat, when:'', source:'', segments:[], voices:[]};
+      const voices = JSON.parse(JSON.stringify(it.voices||[]));
+      const body = dialog(isNew?'إضافة جديد':'تعديل: '+it.title, `
+        <div class="row"><div><label>العنوان</label><input id="f_title" required value="${esc(it.title)}"></div>
+        <div><label>القسم</label><select id="f_cat">${Object.entries(CATS).map(([k,t])=>`<option value="${k}" ${k===it.category?'selected':''}>${t}</option>`).join('')}</select></div></div>
+        <div class="row"><div><label>الوصف أو التوقيت (يظهر تحت العنوان)</label><input id="f_when" value="${esc(it.when)}" placeholder="مثال: يوم الجمعة · بعد صلاة الصبح"></div>
+        <div><label>اليوم (للأدعية والزيارات اليومية)</label><select id="f_wd">${Object.entries(WEEKDAYS).map(([k,t])=>`<option value="${k}" ${String(it.weekday??'')===k?'selected':''}>${t}</option>`).join('')}</select></div>
+        <div><label>مجموعة (ليلة القدر ١٩/٢١/٢٣/all، أو رقم الشهر)</label><input id="f_group" value="${esc(it.group||'')}"></div></div>
+        <label>المصدر</label><input id="f_src" value="${esc(it.source)}" placeholder="مثال: مفاتيح الجنان">
+        <label>النص — افصل بين المقاطع بسطر فارغ</label><textarea class="quran" id="f_text" rows="10">${esc((it.segments||[]).join('\n\n'))}</textarea>
+        <label>الأصوات</label><div class="voices" id="f_voices"></div>
+        <div class="bar"><button type="button" class="btn sec" id="addVoice">+ صوت برابط</button>
+          <label class="btn sec" style="margin:0;display:inline-block">⬆ رفع ملف صوتي<input type="file" accept="audio/*" id="upVoice" hidden></label>
+          <span class="muted" id="upMsg"></span></div>`, async (b)=>{
+        const title = $('#f_title',b).value.trim(); if(!title){alert('اكتب العنوان');return false;}
+        it.title=title; it.category=$('#f_cat',b).value; it.when=$('#f_when',b).value.trim(); it.source=$('#f_src',b).value.trim();
+        const wd=$('#f_wd',b).value; if(wd) it.weekday=+wd; else delete it.weekday;
+        const g=$('#f_group',b).value.trim(); if(g) it.group=g; else delete it.group;
+        it.segments=$('#f_text',b).value.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
+        it.voices=voices.filter(x=>x.url.trim()).map(x=>({name:x.name.trim()||'صوت',url:x.url.trim()}));
+        if(isNew){ it.id = it.category+'_'+Date.now().toString(36); items.push(it); }
+        await saveFile('items.json', (isNew?'إضافة ':'تعديل ')+it.title); draw();
+      });
+      const drawVoices=()=>{ $('#f_voices',body).innerHTML = voices.map((x,i)=>`<div class="v"><input data-n="${i}" value="${esc(x.name)}" placeholder="اسم القارئ"><input data-u="${i}" value="${esc(x.url)}" placeholder="https://…mp3" dir="ltr">
+        <button type="button" class="btn sec" data-p="${i}">▶</button><button type="button" class="btn danger" data-x="${i}">✕</button></div>`).join('') || '<div class="muted">لا يوجد صوت بعد.</div>';
+        body.querySelectorAll('[data-n]').forEach(e=>e.oninput=()=>voices[e.dataset.n].name=e.value);
+        body.querySelectorAll('[data-u]').forEach(e=>e.oninput=()=>voices[e.dataset.u].url=e.value);
+        body.querySelectorAll('[data-x]').forEach(e=>e.onclick=()=>{voices.splice(+e.dataset.x,1);drawVoices()});
+        body.querySelectorAll('[data-p]').forEach(e=>e.onclick=()=>{ const a=new Audio(voices[+e.dataset.p].url); a.play().catch(()=>alert('تعذّر تشغيل الرابط')); setTimeout(()=>a.pause(),15000); });
+      };
+      drawVoices();
+      $('#addVoice',body).onclick=()=>{voices.push({name:'',url:''});drawVoices()};
+      $('#upVoice',body).onchange=async(e)=>{ const f=e.target.files[0]; if(!f)return; $('#upMsg',body).textContent='جارٍ الرفع… لا تغلق النافذة';
+        try{ const url=await uploadMedia(f,'audio'); voices.push({name:f.name.replace(/\.[^.]+$/,''),url}); drawVoices(); $('#upMsg',body).textContent='تم الرفع — اكتب اسم القارئ ثم احفظ'; }
+        catch(err){ $('#upMsg',body).textContent=''; alert('فشل الرفع: '+err.message); } };
+    };
+    v.innerHTML = `<div class="card"><div class="bar"><div style="flex:1"><h2>الأدعية والزيارات والتعقيبات والأعمال</h2>
+      <div class="muted">${items.length} عنصرًا. أي تعديل يُحفظ مباشرة ويظهر في التطبيق عند فتحه.</div></div><button class="btn" id="addItem">+ إضافة</button></div>
+      <div class="row" style="margin-top:12px"><select id="catSel"><option value="all">كل الأقسام</option>${Object.entries(CATS).map(([k,t])=>`<option value="${k}" ${k===cat?'selected':''}>${t}</option>`).join('')}</select>
+      <input id="search" placeholder="بحث…" value="${esc(q)}"></div><div class="list" id="itemsList"></div></div>`;
+    $('#catSel').onchange=e=>{cat=v._cat=e.target.value;draw()}; $('#search').oninput=e=>{q=v._q=e.target.value.trim();draw()};
+    $('#addItem').onclick=()=>editItem(null); draw();
+  },
+
+  async occasions(v){
+    const occ = await loadFile('occasions.json', []); setStatus('متصل ✓');
+    const draw=()=>{ occ.sort((a,b)=>a.month-b.month||a.day-b.day);
+      $('#occList').innerHTML = occ.map((o,i)=>`<div class="item"><div class="grow"><div class="title">${esc(o.title)}</div><div class="muted">${o.day} ${HMONTHS[o.month-1]}</div></div>
+        <button class="btn sec" data-e="${i}">تعديل</button><button class="btn danger" data-d="${i}">حذف</button></div>`).join('') || '<div class="empty">لا توجد مناسبات</div>';
+      $('#occList').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(occ[+b.dataset.e]));
+      $('#occList').querySelectorAll('[data-d]').forEach(b=>b.onclick=async()=>{const o=occ[+b.dataset.d]; if(!confirm(`حذف «${o.title}»؟`))return; occ.splice(+b.dataset.d,1); await saveFile('occasions.json','حذف مناسبة'); draw();}); };
+    const edit=(o)=>{ const isNew=!o; o=o||{month:1,day:1,title:''};
+      dialog(isNew?'مناسبة جديدة':'تعديل مناسبة',`<label>اسم المناسبة</label><input id="o_t" value="${esc(o.title)}">
+        <div class="row"><div><label>اليوم الهجري</label><input id="o_d" type="number" min="1" max="30" value="${o.day}"></div>
+        <div><label>الشهر الهجري</label><select id="o_m">${HMONTHS.map((m,i)=>`<option value="${i+1}" ${i+1===o.month?'selected':''}>${m}</option>`).join('')}</select></div></div>`, async(b)=>{
+        const t=$('#o_t',b).value.trim(); if(!t){alert('اكتب اسم المناسبة');return false;}
+        o.title=t; o.day=Math.min(30,Math.max(1,+$('#o_d',b).value||1)); o.month=+$('#o_m',b).value; if(isNew) occ.push(o);
+        await saveFile('occasions.json',(isNew?'إضافة ':'تعديل ')+t); draw(); }); };
+    v.innerHTML=`<div class="card"><div class="bar"><div style="flex:1"><h2>المناسبات الهجرية</h2><div class="muted">تظهر في الرئيسية والتقويم ويصل تذكيرها قبل ٣ أيام وقبل يوم.</div></div><button class="btn" id="add">+ مناسبة</button></div><div class="list" id="occList"></div></div>`;
+    $('#add').onclick=()=>edit(null); draw();
+  },
+
+  async media(v){
+    const imgs = await loadFile('images.json', []); setStatus('متصل ✓');
+    const MC={ayat:'آيات',duas:'أدعية',occasions:'مناسبات',adhkar:'أذكار'};
+    const draw=()=>{ $('#mList').innerHTML = imgs.map((m,i)=>`<div class="item">${m.type==='video'?'<div style="width:64px;height:64px;border-radius:10px;background:var(--g);color:#fff;display:grid;place-items:center">▶</div>':`<img src="${esc(m.asset)}" style="width:64px;height:64px;object-fit:cover;border-radius:10px">`}
+        <div class="grow"><div class="title">${esc(MC[m.category]||m.category)}</div><div class="muted" dir="ltr" style="text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(m.asset)}</div></div>
+        <button class="btn danger" data-d="${i}">حذف</button></div>`).join('') || '<div class="empty">لا توجد صور أو فيديوهات</div>';
+      $('#mList').querySelectorAll('[data-d]').forEach(b=>b.onclick=async()=>{ if(!confirm('حذف من التطبيق؟'))return; imgs.splice(+b.dataset.d,1); await saveFile('images.json','حذف صورة'); draw(); }); };
+    v.innerHTML=`<div class="card"><h2>الصور والفيديوهات للمشاركة</h2><p class="muted">ضع الشعار في أسفل كل تصميم قبل رفعه. الصور بمقاس ١٠٨٠×١٩٢٠ للحالة والستوري.</p>
+      <div class="row"><select id="mCat">${Object.entries(MC).map(([k,t])=>`<option value="${k}">${t}</option>`).join('')}</select>
+      <label class="btn" style="margin:0;text-align:center">⬆ رفع صورة أو فيديو<input type="file" accept="image/*,video/mp4" id="mUp" hidden multiple></label></div>
+      <div class="muted" id="mMsg"></div><div class="list" id="mList"></div></div>`;
+    $('#mUp').onchange=async e=>{ const fs=[...e.target.files]; for(const f of fs){ $('#mMsg').textContent=`جارٍ رفع ${f.name}…`;
+        try{ const url=await uploadMedia(f, f.type.startsWith('video')?'video':'images'); imgs.unshift({id:Date.now().toString(36),category:$('#mCat').value,asset:url,type:f.type.startsWith('video')?'video':'image'}); }
+        catch(err){ alert('فشل رفع '+f.name+': '+err.message); } }
+      $('#mMsg').textContent=''; await saveFile('images.json','إضافة صور'); draw(); };
+    draw();
+  },
+
+  async voices(v){
+    const d = await loadFile('voices.json', {adhan:[],quran:[],notificationSoundsInstalled:false}); setStatus('متصل ✓');
+    const sec=(key,title,hint)=>`<div class="card"><div class="bar"><div style="flex:1"><h2>${title}</h2><div class="muted">${hint}</div></div>
+      <label class="btn sec" style="margin:0">⬆ رفع ملف<input type="file" accept="audio/*" data-up="${key}" hidden></label><button class="btn sec" data-add="${key}">+ برابط</button></div>
+      <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">
+        <button class="btn sec" data-play="${esc(x.url)}">▶</button><button class="btn danger" data-del="${key}" data-i="${i}">✕</button></div>`).join('')||'<div class="muted">لا يوجد بعد</div>'}</div></div>`;
+    v.innerHTML = sec('adhan','أصوات الأذان','يختار منها المستخدم صوت الأذان داخل التطبيق.') + sec('quran','قرّاء القرآن','رابط المجلد الذي فيه ملفات السور (001.mp3 … 114.mp3)، مثل روابط everyayah.')
+      + `<button class="btn" id="saveV">حفظ الأصوات</button>`;
+    v.querySelectorAll('[data-k]').forEach(e=>e.oninput=()=>d[e.dataset.k][+e.dataset.i][e.dataset.f]=e.value);
+    v.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{(d[b.dataset.add]=d[b.dataset.add]||[]).push({name:'',url:''});VIEWS.voices(v)});
+    v.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{d[b.dataset.del].splice(+b.dataset.i,1);VIEWS.voices(v)});
+    v.querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>{const a=new Audio(b.dataset.play);a.play().catch(()=>alert('تعذّر التشغيل'));setTimeout(()=>a.pause(),15000)});
+    v.querySelectorAll('[data-up]').forEach(inp=>inp.onchange=async e=>{const f=e.target.files[0]; if(!f)return; try{ const url=await uploadMedia(f,'audio'); (d[inp.dataset.up]=d[inp.dataset.up]||[]).push({name:f.name.replace(/\.[^.]+$/,''),url}); VIEWS.voices(v);}catch(err){alert(err.message)}});
+    $('#saveV').onclick=()=>saveFile('voices.json','تحديث الأصوات');
+  },
+
+  async daily(v){
+    const d = await loadFile('daily.json', {ayat:[],hadith:[],adhkar:[]}); setStatus('متصل ✓');
+    const box=(k,t,h)=>`<label>${t}</label><div class="muted">${h}</div><textarea class="quran" id="d_${k}" rows="8">${esc((d[k]||[]).join('\n'))}</textarea>`;
+    v.innerHTML=`<div class="card"><h2>محتوى الإشعار اليومي</h2><p class="muted">كل سطر عنصر واحد. يصل للمستخدم واحد منها يوميًا حسب ما اختاره.</p>
+      ${box('ayat','الآيات','اكتب الآية ثم | ثم اسم السورة ورقم الآية. مثال: إِنَّ مَعَ الْعُسْرِ يُسْرًا|الشرح ٦')}
+      ${box('hadith','الأحاديث','الحديث ثم المصدر بين قوسين')}${box('adhkar','الأذكار','')}
+      <div style="margin-top:12px"><button class="btn" id="saveD">حفظ</button></div></div>`;
+    $('#saveD').onclick=()=>{ for(const k of ['ayat','hadith','adhkar']) d[k]=$('#d_'+k).value.split('\n').map(s=>s.trim()).filter(Boolean); saveFile('daily.json','تحديث الإشعار اليومي'); };
+  },
+
+  async social(v){
+    const d = await loadFile('social.json', {title:'',links:[]}); setStatus('متصل ✓');
+    const get=p=>(d.links.find(l=>l.platform===p)||{}).url||'';
+    v.innerHTML=`<div class="card"><h2>حسابات التواصل</h2><p class="muted">تظهر في آخر الصفحة الرئيسية. اترك الخانة فارغة لإخفاء المنصة.</p>
+      <label>العنوان فوق الأيقونات</label><input id="s_title" value="${esc(d.title)}" placeholder="تابعونا على مواقع التواصل">
+      <div class="row">${Object.entries(PLATFORMS).map(([k,t])=>`<div><label>${t}</label><input data-p="${k}" value="${esc(get(k))}" dir="ltr" placeholder="https://"></div>`).join('')}</div>
+      <div style="margin-top:12px"><button class="btn" id="saveS">حفظ</button></div></div>`;
+    $('#saveS').onclick=()=>{ d.title=$('#s_title').value.trim(); d.links=[...v.querySelectorAll('[data-p]')].map(e=>({platform:e.dataset.p,url:e.value.trim()})); saveFile('social.json','تحديث حسابات التواصل'); };
+  },
+
+  async competition(v){
+    const c = await loadFile('competition.json', {active:false,title:'',description:'',endsAt:'',registerUrl:'',terms:[]}); setStatus('متصل ✓');
+    v.innerHTML=`<div class="card"><h2>المسابقة</h2>
+      <label><input type="checkbox" id="c_active" ${c.active?'checked':''} style="width:auto"> المسابقة مفتوحة الآن</label>
+      <label>عنوان المسابقة</label><input id="c_title" value="${esc(c.title)}">
+      <label>الوصف</label><textarea id="c_desc" rows="4">${esc(c.description)}</textarea>
+      <div class="row"><div><label>آخر موعد للتسجيل</label><input id="c_end" value="${esc(c.endsAt)}" placeholder="مثال: ١٥ رجب ١٤٤٨"></div>
+      <div><label>رابط نموذج التسجيل (اختياري)</label><input id="c_url" value="${esc(c.registerUrl)}" dir="ltr" placeholder="https://forms…"></div></div>
+      <label>الشروط — كل سطر شرط</label><textarea id="c_terms" rows="10">${esc((c.terms||[]).join('\n'))}</textarea>
+      <div style="margin-top:12px"><button class="btn" id="saveC">حفظ</button></div></div>`;
+    $('#saveC').onclick=()=>{ Object.assign(c,{active:$('#c_active').checked,title:$('#c_title').value.trim(),description:$('#c_desc').value.trim(),endsAt:$('#c_end').value.trim(),registerUrl:$('#c_url').value.trim(),terms:$('#c_terms').value.split('\n').map(s=>s.trim()).filter(Boolean)}); saveFile('competition.json','تحديث المسابقة'); };
+  },
+
+  async donations(v){
+    const d = await loadFile('donations.json', {organization:'',campaigns:[]}); setStatus('متصل ✓');
+    v.innerHTML=`<div class="card"><h2>التبرعات</h2><p class="muted">لا تفعّل التبرعات إلا عبر جهة مرخّصة وصفحة دفع آمنة (Stripe أو PayPal أو صفحة الجهة).</p>
+      <label>اسم الجهة المرخّصة</label><input id="g_org" value="${esc(d.organization)}">
+      <div class="list" id="campList"></div><div class="bar" style="margin-top:12px"><button class="btn sec" id="addC">+ حملة</button><button class="btn" id="saveG">حفظ</button></div></div>`;
+    const draw=()=>{ $('#campList').innerHTML=d.campaigns.map((c,i)=>`<div class="card" style="margin:0"><div class="row"><div><label>اسم الحملة</label><input data-i="${i}" data-f="title" value="${esc(c.title)}"></div>
+      <div><label>رابط الدفع</label><input data-i="${i}" data-f="payUrl" value="${esc(c.payUrl)}" dir="ltr"></div></div><label>الوصف</label><input data-i="${i}" data-f="description" value="${esc(c.description)}">
+      <div style="margin-top:8px"><button class="btn danger" data-x="${i}">حذف الحملة</button></div></div>`).join('')||'<div class="muted">لا توجد حملات</div>';
+      v.querySelectorAll('#campList [data-f]').forEach(e=>e.oninput=()=>d.campaigns[+e.dataset.i][e.dataset.f]=e.value);
+      v.querySelectorAll('#campList [data-x]').forEach(b=>b.onclick=()=>{d.campaigns.splice(+b.dataset.x,1);draw()}); };
+    $('#addC').onclick=()=>{d.campaigns.push({id:Date.now().toString(36),title:'',description:'',payUrl:''});draw()};
+    $('#saveG').onclick=()=>{d.organization=$('#g_org').value.trim(); saveFile('donations.json','تحديث التبرعات')};
+    draw();
+  },
+};
+
+if (token) setStatus('…'); render();
+</script>
+</body>
+</html>

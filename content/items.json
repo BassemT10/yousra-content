@@ -1,0 +1,690 @@
+[
+ {
+  "id": "dua_day_6",
+  "title": "دعاء يوم السبت",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 6,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_7",
+  "title": "دعاء يوم الأحد",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 7,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_1",
+  "title": "دعاء يوم الاثنين",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 1,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_2",
+  "title": "دعاء يوم الثلاثاء",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 2,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_3",
+  "title": "دعاء يوم الأربعاء",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 3,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_4",
+  "title": "دعاء يوم الخميس",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 4,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_day_5",
+  "title": "دعاء يوم الجمعة",
+  "category": "days",
+  "when": "من أدعية أيام الأسبوع",
+  "weekday": 5,
+  "source": "الصحيفة السجادية / مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_ahd",
+  "title": "دعاء العهد",
+  "category": "days",
+  "when": "يومي · بعد صلاة الصبح",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_sabah",
+  "title": "دعاء الصباح",
+  "category": "days",
+  "when": "يومي · بعد صلاة الصبح",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_kumayl",
+  "title": "دعاء كميل",
+  "category": "days",
+  "when": "ليلة الجمعة",
+  "weekday": 4,
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_nudba",
+  "title": "دعاء الندبة",
+  "category": "days",
+  "when": "يوم الجمعة",
+  "weekday": 5,
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_simat",
+  "title": "دعاء السمات",
+  "category": "days",
+  "when": "آخر ساعة من يوم الجمعة",
+  "weekday": 5,
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_iftitah",
+  "title": "دعاء الافتتاح",
+  "category": "occasions",
+  "when": "ليالي شهر رمضان",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_abuhamza",
+  "title": "دعاء أبي حمزة الثمالي",
+  "category": "occasions",
+  "when": "أسحار شهر رمضان",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_arafa",
+  "title": "دعاء عرفة",
+  "category": "occasions",
+  "when": "٩ ذو الحجة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "dua_nudba_eid",
+  "title": "دعاء الندبة",
+  "category": "occasions",
+  "when": "الأعياد الأربعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "munajat_15",
+  "title": "المناجاة الخمس عشرة",
+  "category": "munajat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "munajat_shabaniya",
+  "title": "المناجاة الشعبانية",
+  "category": "munajat",
+  "when": "شهر شعبان",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_6",
+  "title": "زيارة النبي (ص)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 6,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_7",
+  "title": "زيارة أمير المؤمنين والسيدة الزهراء (ع)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 7,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_1",
+  "title": "زيارة الإمامين الحسن والحسين (ع)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 1,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_2",
+  "title": "زيارة الأئمة السجاد والباقر والصادق (ع)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 2,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_3",
+  "title": "زيارة الأئمة الكاظم والرضا والجواد والهادي (ع)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 3,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_4",
+  "title": "زيارة الإمام الحسن العسكري (ع)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 4,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_day_5",
+  "title": "زيارة صاحب الزمان (عج)",
+  "category": "ziyarat",
+  "when": "زيارة اليوم",
+  "weekday": 5,
+  "source": "مفاتيح الجنان — زيارات أيام الأسبوع",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_0",
+  "title": "زيارة عاشوراء",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_1",
+  "title": "زيارة أمين الله",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_2",
+  "title": "الزيارة الجامعة الكبيرة",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_3",
+  "title": "زيارة وارث",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_4",
+  "title": "زيارة الأربعين",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "ziyara_5",
+  "title": "زيارة آل يس",
+  "category": "ziyarat",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "taqib_takbir",
+  "title": "التكبير ثلاثًا",
+  "category": "taqibat",
+  "when": "عام",
+  "source": "مفاتيح الجنان",
+  "segments": [
+   "اللَّهُ أَكْبَرُ — ثلاث مرات رافعًا يديك"
+  ],
+  "voices": []
+ },
+ {
+  "id": "taqib_zahra",
+  "title": "تسبيحة الزهراء (ع)",
+  "category": "taqibat",
+  "when": "عام",
+  "source": "مفاتيح الجنان",
+  "segments": [
+   "٣٤ تكبيرة · ٣٣ تحميدة · ٣٣ تسبيحة"
+  ],
+  "voices": []
+ },
+ {
+  "id": "taqib_kursi",
+  "title": "آية الكرسي",
+  "category": "taqibat",
+  "when": "عام",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "taqib_fajr",
+  "title": "دعاء العهد",
+  "category": "taqibat",
+  "when": "الصبح",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "taqib_dhuhr",
+  "title": "دعاء بعد صلاة الظهر",
+  "category": "taqibat",
+  "when": "الظهر",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "taqib_asr",
+  "title": "الاستغفار سبعين مرة",
+  "category": "taqibat",
+  "when": "العصر",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "taqib_maghrib",
+  "title": "نافلة المغرب",
+  "category": "taqibat",
+  "when": "المغرب",
+  "source": "مفاتيح الجنان",
+  "segments": [
+   "أربع ركعات"
+  ],
+  "voices": []
+ },
+ {
+  "id": "taqib_isha",
+  "title": "نافلة العشاء (الوتيرة)",
+  "category": "taqibat",
+  "when": "العشاء",
+  "source": "مفاتيح الجنان",
+  "segments": [
+   "ركعتان من جلوس"
+  ],
+  "voices": []
+ },
+ {
+  "id": "taqib_shukr",
+  "title": "سجدة الشكر",
+  "category": "taqibat",
+  "when": "عام",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "istikhara",
+  "title": "دعاء الاستخارة",
+  "category": "other",
+  "when": "",
+  "source": "",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_0",
+  "title": "الغسل",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_1",
+  "title": "صلاة ركعتين: في كل ركعة الحمد والتوحيد سبع مرات",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_2",
+  "title": "أخذ المصحف ونشره بين اليدين والدعاء",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_3",
+  "title": "وضع المصحف على الرأس والقسم على الله",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_4",
+  "title": "زيارة الإمام الحسين (ع)",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_5",
+  "title": "إحياء الليلة",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_6",
+  "title": "مئة ركعة",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_all_7",
+  "title": "دعاء الجوشن الكبير",
+  "category": "qadr",
+  "group": "all",
+  "when": "أعمال مشتركة لليالي القدر الثلاث",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_19_0",
+  "title": "الاستغفار مئة مرة",
+  "category": "qadr",
+  "group": "19",
+  "when": "ليلة التاسع عشر",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_19_1",
+  "title": "«اللهم العن قتلة أمير المؤمنين» مئة مرة",
+  "category": "qadr",
+  "group": "19",
+  "when": "ليلة التاسع عشر",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_19_2",
+  "title": "دعاء «يا ذا الذي كان قبل كل شيء»",
+  "category": "qadr",
+  "group": "19",
+  "when": "ليلة التاسع عشر",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_21_0",
+  "title": "الإكثار من الدعاء والاستغفار",
+  "category": "qadr",
+  "group": "21",
+  "when": "ليلة الحادي والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_21_1",
+  "title": "أدعية الليلة الحادية والعشرين من شهر رمضان",
+  "category": "qadr",
+  "group": "21",
+  "when": "ليلة الحادي والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_23_0",
+  "title": "قراءة سورتي العنكبوت والروم",
+  "category": "qadr",
+  "group": "23",
+  "when": "ليلة الثالث والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_23_1",
+  "title": "قراءة سورة الدخان",
+  "category": "qadr",
+  "group": "23",
+  "when": "ليلة الثالث والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_23_2",
+  "title": "قراءة سورة القدر ألف مرة",
+  "category": "qadr",
+  "group": "23",
+  "when": "ليلة الثالث والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "qadr_23_3",
+  "title": "دعاء «اللهم كن لوليك»",
+  "category": "qadr",
+  "group": "23",
+  "when": "ليلة الثالث والعشرين",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_1",
+  "title": "أعمال شهر محرم",
+  "category": "amaal_month",
+  "group": "1",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_7",
+  "title": "أعمال شهر رجب",
+  "category": "amaal_month",
+  "group": "7",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_8",
+  "title": "أعمال شهر شعبان",
+  "category": "amaal_month",
+  "group": "8",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_9",
+  "title": "أعمال شهر رمضان المبارك",
+  "category": "amaal_month",
+  "group": "9",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_12",
+  "title": "أعمال شهر ذي الحجة",
+  "category": "amaal_month",
+  "group": "12",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_3",
+  "title": "أعمال شهر ربيع الأول",
+  "category": "amaal_month",
+  "group": "3",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "month_11",
+  "title": "أعمال شهر ذي القعدة",
+  "category": "amaal_month",
+  "group": "11",
+  "when": "",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_0",
+  "title": "غسل الجمعة",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_1",
+  "title": "الصدقة",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_2",
+  "title": "قراءة القرآن وسورة الكهف",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_3",
+  "title": "الإكثار من الصلاة على محمد وآل محمد",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_4",
+  "title": "دعاء الندبة",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ },
+ {
+  "id": "friday_5",
+  "title": "زيارة صاحب الزمان (عج)",
+  "category": "friday",
+  "when": "يوم الجمعة",
+  "source": "مفاتيح الجنان",
+  "segments": [],
+  "voices": []
+ }
+]
