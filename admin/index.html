@@ -154,7 +154,7 @@ async function uploadMedia(file, folder) {
 // ===== الواجهة =====
 const TABS = [
   ['items','الأدعية والزيارات'],['occasions','المناسبات'],['media','الصور والفيديو'],['voices','الأصوات'],
-  ['daily','الإشعار اليومي'],['social','التواصل'],['competition','المسابقة'],['donations','التبرعات'],['settings','الاتصال']
+  ['daily','الإشعار اليومي'],['social','التواصل'],['competition','المسابقة'],['settings','الاتصال']
 ];
 let tab = 'items';
 function renderTabs(){ $('#tabs').innerHTML = TABS.map(([k,t])=>`<button type="button" class="${k===tab?'on':''}" data-k="${k}">${t}</button>`).join('');
@@ -287,12 +287,13 @@ const VIEWS = {
   },
 
   async voices(v){
-    const d = await loadFile('voices.json', {adhan:[],quran:[],notificationSoundsInstalled:false}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
+    const d = await loadFile('voices.json', {adhan:[],quran:[],alerts:[],notificationSoundsInstalled:false}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const sec=(key,title,hint)=>`<div class="card"><div class="bar"><div style="flex:1"><h2>${title}</h2><div class="muted">${hint}</div></div>
       <label class="btn sec" style="margin:0">⬆ رفع ملف<input type="file" accept="audio/*" data-up="${key}" hidden></label><button class="btn sec" data-add="${key}">+ برابط</button></div>
       <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">
         <button class="btn sec" data-play="${esc(x.url)}">▶</button><button class="btn danger" data-del="${key}" data-i="${i}">✕</button></div>`).join('')||'<div class="muted">لا يوجد بعد</div>'}</div></div>`;
-    v.innerHTML = sec('adhan','أصوات الأذان','يختار منها المستخدم صوت الأذان داخل التطبيق.') + sec('quran','قرّاء القرآن','أضِف القارئ «برابط» بصيغة ملفات الآيات، مثل: https://everyayah.com/data/اسم_القارئ/{sss}{aaa}.mp3 — حيث {sss} رقم السورة و{aaa} رقم الآية. اختر اسم المجلد من everyayah.com/recitations_pages.html')
+    v.innerHTML = sec('adhan','أصوات الأذان','ارفع ملف الأذان (mp3). يختار منه المستخدم صوت أذان كل صلاة، ويُحفظ على هاتفه تلقائيًا ليُشغَّل مع الإشعار.')
+      + sec('alerts','نغمات التنبيهات','نغمات قصيرة للتذكيرات (الإمساك، الأذكار، المناسبات…). يختار المستخدم منها في الإعدادات.') + sec('quran','قرّاء القرآن','أضِف القارئ «برابط» بصيغة ملفات الآيات، مثل: https://everyayah.com/data/اسم_القارئ/{sss}{aaa}.mp3 — حيث {sss} رقم السورة و{aaa} رقم الآية. اختر اسم المجلد من everyayah.com/recitations_pages.html')
       + `<button class="btn" id="saveV">حفظ الأصوات</button>`;
     v.querySelectorAll('[data-k]').forEach(e=>e.oninput=()=>d[e.dataset.k][+e.dataset.i][e.dataset.f]=e.value);
     v.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{(d[b.dataset.add]=d[b.dataset.add]||[]).push({name:'',url:''});VIEWS.voices(v)});
@@ -335,20 +336,6 @@ const VIEWS = {
     $('#saveC').onclick=()=>{ Object.assign(c,{active:$('#c_active').checked,title:$('#c_title').value.trim(),description:$('#c_desc').value.trim(),endsAt:$('#c_end').value.trim(),registerUrl:$('#c_url').value.trim(),terms:$('#c_terms').value.split('\n').map(s=>s.trim()).filter(Boolean)}); saveFile('competition.json','تحديث المسابقة'); };
   },
 
-  async donations(v){
-    const d = await loadFile('donations.json', {organization:'',campaigns:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
-    v.innerHTML=`<div class="card"><h2>التبرعات</h2><p class="muted">لا تفعّل التبرعات إلا عبر جهة مرخّصة وصفحة دفع آمنة (Stripe أو PayPal أو صفحة الجهة).</p>
-      <label>اسم الجهة المرخّصة</label><input id="g_org" value="${esc(d.organization)}">
-      <div class="list" id="campList"></div><div class="bar" style="margin-top:12px"><button class="btn sec" id="addC">+ حملة</button><button class="btn" id="saveG">حفظ</button></div></div>`;
-    const draw=()=>{ $('#campList').innerHTML=d.campaigns.map((c,i)=>`<div class="card" style="margin:0"><div class="row"><div><label>اسم الحملة</label><input data-i="${i}" data-f="title" value="${esc(c.title)}"></div>
-      <div><label>رابط الدفع</label><input data-i="${i}" data-f="payUrl" value="${esc(c.payUrl)}" dir="ltr"></div></div><label>الوصف</label><input data-i="${i}" data-f="description" value="${esc(c.description)}">
-      <div style="margin-top:8px"><button class="btn danger" data-x="${i}">حذف الحملة</button></div></div>`).join('')||'<div class="muted">لا توجد حملات</div>';
-      v.querySelectorAll('#campList [data-f]').forEach(e=>e.oninput=()=>d.campaigns[+e.dataset.i][e.dataset.f]=e.value);
-      v.querySelectorAll('#campList [data-x]').forEach(b=>b.onclick=()=>{d.campaigns.splice(+b.dataset.x,1);draw()}); };
-    $('#addC').onclick=()=>{d.campaigns.push({id:Date.now().toString(36),title:'',description:'',payUrl:''});draw()};
-    $('#saveG').onclick=()=>{d.organization=$('#g_org').value.trim(); saveFile('donations.json','تحديث التبرعات')};
-    draw();
-  },
 };
 
 if (token) setStatus('…'); render();
