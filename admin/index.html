@@ -214,8 +214,10 @@ const VIEWS = {
         <div class="row"><div><label>الوصف أو التوقيت (يظهر تحت العنوان)</label><input id="f_when" value="${esc(it.when)}" placeholder="مثال: يوم الجمعة · بعد صلاة الصبح"></div>
         <div><label>اليوم (للأدعية والزيارات اليومية)</label><select id="f_wd">${Object.entries(WEEKDAYS).map(([k,t])=>`<option value="${k}" ${String(it.weekday??'')===k?'selected':''}>${t}</option>`).join('')}</select></div>
         <div><label>مجموعة (ليلة القدر ١٩/٢١/٢٣/all، أو رقم الشهر)</label><input id="f_group" value="${esc(it.group||'')}"></div></div>
+        <div class="row"><div><label>يوم الشهر الهجري (لأعمال الشهور: 0 = أعمال عامة، 30 = آخر الشهر)</label><input id="f_day" type="number" min="0" max="30" value="${it.day??''}"></div>
+        <div><label>ليلة أم يوم</label><select id="f_night"><option value="0" ${it.night?'':'selected'}>اليوم</option><option value="1" ${it.night?'selected':''}>الليلة (ليلة ذلك اليوم)</option></select></div></div>
         <label>المصدر</label><input id="f_src" value="${esc(it.source)}" placeholder="مثال: مفاتيح الجنان">
-        <label>النص — افصل بين المقاطع بسطر فارغ</label><textarea class="quran" id="f_text" rows="10">${esc((it.segments||[]).join('\n\n'))}</textarea>
+        <label>النص — افصل بين المقاطع بسطر فارغ. ما بين ⟦ و ⟧ يظهر بخط عريض، والسطر «— عنوان —» يظهر عنوانًا</label><textarea class="quran" id="f_text" rows="10">${esc((it.segments||[]).join('\n\n'))}</textarea>
         <label>الأصوات</label><div class="voices" id="f_voices"></div>
         <div class="bar"><button type="button" class="btn sec" id="addVoice">+ صوت برابط</button>
           <label class="btn sec" style="margin:0;display:inline-block">⬆ رفع ملف صوتي<input type="file" accept="audio/*" id="upVoice" hidden></label>
@@ -224,6 +226,8 @@ const VIEWS = {
         it.title=title; it.category=$('#f_cat',b).value; it.when=$('#f_when',b).value.trim(); it.source=$('#f_src',b).value.trim();
         const wd=$('#f_wd',b).value; if(wd) it.weekday=+wd; else delete it.weekday;
         const g=$('#f_group',b).value.trim(); if(g) it.group=g; else delete it.group;
+        const dy=$('#f_day',b).value.trim(); if(dy!=='') it.day=+dy; else delete it.day;
+        if($('#f_night',b).value==='1') it.night=true; else delete it.night;
         it.segments=$('#f_text',b).value.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
         it.voices=voices.filter(x=>x.url.trim()).map(x=>({name:x.name.trim()||'صوت',url:x.url.trim()}));
         if(isNew){ it.id = it.category+'_'+Date.now().toString(36); items.push(it); }
