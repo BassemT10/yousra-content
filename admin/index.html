@@ -294,27 +294,29 @@ const VIEWS = {
     const d = await loadFile('voices.json', {adhan:[],quran:[],alerts:[],notificationSoundsInstalled:false}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const sec=(key,title,hint)=>`<div class="card"><div class="bar"><div style="flex:1"><h2>${title}</h2><div class="muted">${hint}</div></div>
       <label class="btn sec" style="margin:0">⬆ رفع ملف<input type="file" accept="audio/*" data-up="${key}" hidden></label><button class="btn sec" data-add="${key}">+ برابط</button></div>
-      <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">
+      <div class="voices list">${(d[key]||[]).map((x,i)=>`<div class="v"><input data-k="${key}" data-i="${i}" data-f="name" value="${esc(x.name)}" placeholder="الاسم"><input data-k="${key}" data-i="${i}" data-f="url" value="${esc(x.url)}" dir="ltr">${key==='tones'?`<select data-k="${key}" data-i="${i}" data-f="group">${['قرآن','أدعية','زيارات','مناجاة','نغمات'].map(g=>`<option ${x.group===g?'selected':''}>${g}</option>`).join('')}</select>`:''}
         <button class="btn sec" data-play="${esc(x.url)}">▶</button><button class="btn danger" data-del="${key}" data-i="${i}">✕</button></div>`).join('')||'<div class="muted">لا يوجد بعد</div>'}</div></div>`;
     v.innerHTML = sec('adhan','أصوات الأذان','ارفع ملف الأذان (mp3). يختار منه المستخدم صوت أذان كل صلاة، ويُحفظ على هاتفه تلقائيًا ليُشغَّل مع الإشعار.')
-      + sec('alerts','نغمات التنبيهات','نغمات قصيرة للتذكيرات (الإمساك، الأذكار، المناسبات…). يختار المستخدم منها في الإعدادات.') + sec('quran','قرّاء القرآن','أضِف القارئ «برابط» بصيغة ملفات الآيات، مثل: https://everyayah.com/data/اسم_القارئ/{sss}{aaa}.mp3 — حيث {sss} رقم السورة و{aaa} رقم الآية. اختر اسم المجلد من everyayah.com/recitations_pages.html')
+      + sec('tones','مكتبة نغمات الإشعارات','مقاطع قصيرة (٥ ثوانٍ إلى دقيقة) من آيات وأدعية وزيارات ومناجاة، أو نغمات تنبيه. يختار المستخدم منها نغمة كل نوع من الإشعارات وكل تذكير. اختر المجموعة لكل نغمة.')
+      + sec('alerts','نغمات التنبيهات (قديم)','نغمات قصيرة للتذكيرات (الإمساك، الأذكار، المناسبات…). يختار المستخدم منها في الإعدادات.') + sec('quran','قرّاء القرآن','أضِف القارئ «برابط» بصيغة ملفات الآيات، مثل: https://everyayah.com/data/اسم_القارئ/{sss}{aaa}.mp3 — حيث {sss} رقم السورة و{aaa} رقم الآية. اختر اسم المجلد من everyayah.com/recitations_pages.html')
       + `<button class="btn" id="saveV">حفظ الأصوات</button>`;
-    v.querySelectorAll('[data-k]').forEach(e=>e.oninput=()=>d[e.dataset.k][+e.dataset.i][e.dataset.f]=e.value);
+    v.querySelectorAll('[data-k]').forEach(e=>e.oninput=e.onchange=()=>d[e.dataset.k][+e.dataset.i][e.dataset.f]=e.value);
     v.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{(d[b.dataset.add]=d[b.dataset.add]||[]).push({name:'',url:''});VIEWS.voices(v)});
     v.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{d[b.dataset.del].splice(+b.dataset.i,1);VIEWS.voices(v)});
     v.querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>{const a=new Audio(b.dataset.play);a.play().catch(()=>alert('تعذّر التشغيل'));setTimeout(()=>a.pause(),15000)});
-    v.querySelectorAll('[data-up]').forEach(inp=>inp.onchange=async e=>{const f=e.target.files[0]; if(!f)return; try{ const url=await uploadMedia(f,'audio'); (d[inp.dataset.up]=d[inp.dataset.up]||[]).push({name:f.name.replace(/\.[^.]+$/,''),url}); VIEWS.voices(v);}catch(err){alert(err.message)}});
+    v.querySelectorAll('[data-up]').forEach(inp=>inp.onchange=async e=>{const f=e.target.files[0]; if(!f)return; try{ const url=await uploadMedia(f,'audio'); (d[inp.dataset.up]=d[inp.dataset.up]||[]).push(inp.dataset.up==='tones'?{id:url,name:f.name.replace(/\.[^.]+$/,''),group:'نغمات',url}:{name:f.name.replace(/\.[^.]+$/,''),url}); VIEWS.voices(v);}catch(err){alert(err.message)}});
     $('#saveV').onclick=()=>saveFile('voices.json','تحديث الأصوات');
   },
 
   async daily(v){
-    const d = await loadFile('daily.json', {ayat:[],hadith:[],adhkar:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
+    const d = await loadFile('daily.json', {ayat:[],hadith:[],adhkar:[],duas:[]}); setStatus(token?'متصل ✓':'غير متصل — تصفّح فقط');
     const box=(k,t,h)=>`<label>${t}</label><div class="muted">${h}</div><textarea class="quran" id="d_${k}" rows="8">${esc((d[k]||[]).join('\n'))}</textarea>`;
     v.innerHTML=`<div class="card"><h2>محتوى الإشعار اليومي</h2><p class="muted">كل سطر عنصر واحد. يصل للمستخدم واحد منها يوميًا حسب ما اختاره.</p>
       ${box('ayat','الآيات','اكتب الآية ثم | ثم اسم السورة ورقم الآية. مثال: إِنَّ مَعَ الْعُسْرِ يُسْرًا|الشرح ٦')}
-      ${box('hadith','الأحاديث','الحديث ثم المصدر بين قوسين')}${box('adhkar','الأذكار','')}
+      ${box('hadith','الأحاديث','الحديث ثم | ثم القائل. مثال: الدعاء مخ العبادة|النبي (ص)')}
+      ${box('duas','أدعية ومناجاة قصيرة (للأدوات وشاشة القفل)','سطران كحد أقصى: النص ثم | ثم اسم الدعاء. مثال: يا من اسمه دواء وذكره شفاء|دعاء كميل')}${box('adhkar','الأذكار','')}
       <div style="margin-top:12px"><button class="btn" id="saveD">حفظ</button></div></div>`;
-    $('#saveD').onclick=()=>{ for(const k of ['ayat','hadith','adhkar']) d[k]=$('#d_'+k).value.split('\n').map(s=>s.trim()).filter(Boolean); saveFile('daily.json','تحديث الإشعار اليومي'); };
+    $('#saveD').onclick=()=>{ for(const k of ['ayat','hadith','duas','adhkar']) d[k]=$('#d_'+k).value.split('\n').map(s=>s.trim()).filter(Boolean); saveFile('daily.json','تحديث الإشعار اليومي'); };
   },
 
   async social(v){

@@ -128,5 +128,322 @@
   }
  ],
  "notificationSoundsInstalled": false,
- "alerts": []
+ "alerts": [],
+ "tones": [
+  {
+   "id": "q01-dhikr-qulub",
+   "name": "أَلا بِذِكْرِ اللهِ تَطْمَئِنُّ القُلُوبُ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q01-dhikr-qulub.mp3",
+   "dur": 14.7
+  },
+  {
+   "id": "q02-usr-yusra",
+   "name": "فَإِنَّ مَعَ العُسْرِ يُسْراً",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q02-usr-yusra.mp3",
+   "dur": 9.1
+  },
+  {
+   "id": "q03-qarib",
+   "name": "وَإِذا سَأَلَكَ عِبادِي عَنِّي فَإِنِّي قَرِيبٌ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q03-qarib.mp3",
+   "dur": 35.4
+  },
+  {
+   "id": "q04-uduni",
+   "name": "ادْعُونِي أَسْتَجِبْ لَكُمْ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q04-uduni.mp3",
+   "dur": 19.6
+  },
+  {
+   "id": "q05-fadhkuruni",
+   "name": "فَاذْكُرُونِي أَذْكُرْكُمْ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q05-fadhkuruni.mp3",
+   "dur": 12.0
+  },
+  {
+   "id": "q06-hasbuna",
+   "name": "حَسْبُنا اللهُ وَنِعْمَ الوَكِيلُ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q06-hasbuna.mp3",
+   "dur": 21.3
+  },
+  {
+   "id": "q07-la-taqnatu",
+   "name": "لا تَقْنَطُوا مِنْ رَحْمَةِ اللهِ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q07-la-taqnatu.mp3",
+   "dur": 27.4
+  },
+  {
+   "id": "q08-tawakkul",
+   "name": "وَمَنْ يَتَوَكَّلْ عَلَى اللهِ فَهُوَ حَسْبُهُ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q08-tawakkul.mp3",
+   "dur": 24.2
+  },
+  {
+   "id": "q09-rabbana-atina",
+   "name": "رَبَّنا آتِنا فِي الدُّنْيا حَسَنَةً",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q09-rabbana-atina.mp3",
+   "dur": 23.6
+  },
+  {
+   "id": "q10-ikhlas",
+   "name": "سورة الإخلاص",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q10-ikhlas.mp3",
+   "dur": 13.7
+  },
+  {
+   "id": "q11-kawthar",
+   "name": "سورة الكوثر",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q11-kawthar.mp3",
+   "dur": 14.1
+  },
+  {
+   "id": "q12-nasr",
+   "name": "سورة النصر",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q12-nasr.mp3",
+   "dur": 23.3
+  },
+  {
+   "id": "q13-sharh",
+   "name": "فَإِذا فَرَغْتَ فَانْصَبْ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q13-sharh.mp3",
+   "dur": 7.9
+  },
+  {
+   "id": "q14-basmala",
+   "name": "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ الحَمْدُ لِلهِ رَبِّ العالَمِينَ",
+   "group": "قرآن",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/q14-basmala.mp3",
+   "dur": 9.7
+  },
+  {
+   "id": "d01-kumayl",
+   "name": "دعاء كميل: اللّهُمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d01-kumayl.mp3",
+   "dur": 17.6
+  },
+  {
+   "id": "d02-sabah",
+   "name": "دعاء الصباح: يا مَنْ دَلَعَ لِسانَ الصَّباحِ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d02-sabah.mp3",
+   "dur": 19.8
+  },
+  {
+   "id": "d03-ahd",
+   "name": "دعاء العهد: اللّهُمَّ رَبَّ النُّورِ العَظِيمِ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d03-ahd.mp3",
+   "dur": 20.5
+  },
+  {
+   "id": "d04-iftitah",
+   "name": "دعاء الافتتاح: أَفْتَتِحُ الثَّناءَ بِحَمْدِكَ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d04-iftitah.mp3",
+   "dur": 15.9
+  },
+  {
+   "id": "d05-makarim",
+   "name": "مكارم الأخلاق: وَبَلِّغْ بِإِيمانِي أَكْمَلَ الإِيمانِ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d05-makarim.mp3",
+   "dur": 16.6
+  },
+  {
+   "id": "d06-abuhamza",
+   "name": "أبو حمزة: بِكَ عَرَفْتُكَ وَأَنْتَ دَلَلْتَنِي عَلَيْكَ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d06-abuhamza.mp3",
+   "dur": 11.7
+  },
+  {
+   "id": "d07-amn",
+   "name": "يا مَنْ تُحَلُّ بِهِ عُقَدُ المَكارِهِ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d07-amn.mp3",
+   "dur": 6.2
+  },
+  {
+   "id": "d08-faraj",
+   "name": "دعاء الفرج: إِلهِي عَظُمَ البَلاءُ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d08-faraj.mp3",
+   "dur": 22.6
+  },
+  {
+   "id": "d09-tawassul",
+   "name": "دعاء التوسل: يا أَبا القاسِمِ يا رَسُولَ اللهِ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d09-tawassul.mp3",
+   "dur": 8.0
+  },
+  {
+   "id": "d10-nudba",
+   "name": "دعاء الندبة: الحَمْدُ لِلهِ رَبِّ العالَمِينَ",
+   "group": "أدعية",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/d10-nudba.mp3",
+   "dur": 16.3
+  },
+  {
+   "id": "z01-ashura",
+   "name": "السَّلامُ عَلَيْكَ يا أَبا عَبْدِ اللهِ",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z01-ashura.mp3",
+   "dur": 13.2
+  },
+  {
+   "id": "z02-warith",
+   "name": "السَّلامُ عَلَيْكَ يا وارِثَ آدَمَ",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z02-warith.mp3",
+   "dur": 17.8
+  },
+  {
+   "id": "z03-aminallah",
+   "name": "السَّلامُ عَلَيْكَ يا أَمِينَ اللهِ فِي أَرْضِهِ",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z03-aminallah.mp3",
+   "dur": 16.5
+  },
+  {
+   "id": "z04-arbain",
+   "name": "السَّلامُ عَلَى الحُسَيْنِ المَظْلُومِ الشَّهِيدِ",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z04-arbain.mp3",
+   "dur": 6.0
+  },
+  {
+   "id": "z05-jamia",
+   "name": "السَّلامُ عَلَيْكُمْ يا أَهْلَ بَيْتِ النُّبُوَّةِ",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z05-jamia.mp3",
+   "dur": 11.3
+  },
+  {
+   "id": "z06-alyasin",
+   "name": "سَلامٌ عَلى آلِ يس",
+   "group": "زيارات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/z06-alyasin.mp3",
+   "dur": 9.0
+  },
+  {
+   "id": "m01-taibin",
+   "name": "مناجاة التائبين: إِلهِي أَلْبَسَتْنِي الخَطايا",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m01-taibin.mp3",
+   "dur": 13.1
+  },
+  {
+   "id": "m02-muhibbin",
+   "name": "مناجاة المحبين: مَنْ ذا الَّذِي ذاقَ حَلاوَةَ مَحَبَّتِكَ",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m02-muhibbin.mp3",
+   "dur": 25.8
+  },
+  {
+   "id": "m03-muridin",
+   "name": "مناجاة المريدين: ما أَضْيَقَ الطُّرُقَ",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m03-muridin.mp3",
+   "dur": 22.9
+  },
+  {
+   "id": "m04-raghibin",
+   "name": "مناجاة الراغبين: إِنْ كانَ قَلَّ زادِي",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m04-raghibin.mp3",
+   "dur": 21.0
+  },
+  {
+   "id": "m05-shabaniya",
+   "name": "المناجاة الشعبانية: وَاسْمَعْ دُعائِي إِذا دَعَوْتُكَ",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m05-shabaniya.mp3",
+   "dur": 30.3
+  },
+  {
+   "id": "m06-shabaniya-nadaytahu",
+   "name": "الشعبانية: وَاجْعَلْنِي مِمَّنْ نادَيْتَهُ فَأَجابَكَ",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m06-shabaniya-nadaytahu.mp3",
+   "dur": 14.7
+  },
+  {
+   "id": "m07-shabaniya-inqita",
+   "name": "الشعبانية: إِلهِي هَبْ لِي كَمالَ الانْقِطاعِ إِلَيْكَ",
+   "group": "مناجاة",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/m07-shabaniya-inqita.mp3",
+   "dur": 21.2
+  },
+  {
+   "id": "t01-soft-bell",
+   "name": "جرس هادئ",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t01-soft-bell.mp3",
+   "dur": 6.0
+  },
+  {
+   "id": "t02-double-ding",
+   "name": "رنّة مزدوجة",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t02-double-ding.mp3",
+   "dur": 5.0
+  },
+  {
+   "id": "t03-harp",
+   "name": "قيثارة",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t03-harp.mp3",
+   "dur": 7.0
+  },
+  {
+   "id": "t04-wind-chimes",
+   "name": "أجراس الريح",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t04-wind-chimes.mp3",
+   "dur": 9.0
+  },
+  {
+   "id": "t05-digital",
+   "name": "تنبيه رقمي",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t05-digital.mp3",
+   "dur": 5.0
+  },
+  {
+   "id": "t06-marimba",
+   "name": "ماريمبا",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t06-marimba.mp3",
+   "dur": 6.0
+  },
+  {
+   "id": "t07-dawn",
+   "name": "نغمة الفجر",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t07-dawn.mp3",
+   "dur": 10.0
+  },
+  {
+   "id": "t08-alarm",
+   "name": "منبّه متكرر",
+   "group": "نغمات",
+   "url": "https://bassemt10.github.io/yousra-content/audio/tones/t08-alarm.mp3",
+   "dur": 10.0
+  }
+ ]
 }
