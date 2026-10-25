@@ -1,1 +1,665 @@
-[]
+[
+ {
+  "id": "v_d01-munajat-shabaniya",
+  "type": "video",
+  "category": "duas",
+  "title": "المناجاة الشعبانية",
+  "tags": [
+   "المناجاة",
+   "الدعاء",
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d01-munajat-shabaniya.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d01-munajat-shabaniya.jpg"
+ },
+ {
+  "id": "v_d02-kumayl",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء كميل",
+  "tags": [
+   "الدعاء",
+   "التوبة",
+   "الرحمة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d02-kumayl.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d02-kumayl.jpg"
+ },
+ {
+  "id": "v_d03-sabah",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الصباح",
+  "tags": [
+   "الدعاء",
+   "النور"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d03-sabah.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d03-sabah.jpg"
+ },
+ {
+  "id": "v_d04-ahd",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء العهد",
+  "tags": [
+   "الإمام المهدي",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d04-ahd.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d04-ahd.jpg"
+ },
+ {
+  "id": "v_d05-iftitah",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الافتتاح",
+  "tags": [
+   "رمضان",
+   "الدعاء",
+   "الحمد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d05-iftitah.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d05-iftitah.jpg"
+ },
+ {
+  "id": "v_d06-nudba",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الندبة",
+  "tags": [
+   "الإمام المهدي",
+   "أهل البيت"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d06-nudba.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d06-nudba.jpg"
+ },
+ {
+  "id": "v_d08-abuhamza",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء أبي حمزة الثمالي",
+  "tags": [
+   "رمضان",
+   "التوبة",
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d08-abuhamza.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d08-abuhamza.jpg"
+ },
+ {
+  "id": "v_d09-makarim",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء مكارم الأخلاق",
+  "tags": [
+   "الأخلاق",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d09-makarim.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d09-makarim.jpg"
+ },
+ {
+  "id": "v_d10-faraj",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الفرج",
+  "tags": [
+   "الإمام المهدي",
+   "اليسر والفرج"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d10-faraj.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d10-faraj.jpg"
+ },
+ {
+  "id": "v_d11-amn",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يا من تحل به عقد المكاره",
+  "tags": [
+   "اليسر والفرج",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d11-amn.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d11-amn.jpg"
+ },
+ {
+  "id": "v_d12-tawassul",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء التوسل",
+  "tags": [
+   "أهل البيت",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d12-tawassul.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d12-tawassul.jpg"
+ },
+ {
+  "id": "v_m01-taibin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة التائبين",
+  "tags": [
+   "التوبة",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m01-taibin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m01-taibin.jpg"
+ },
+ {
+  "id": "v_m02-muhibbin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة المحبين",
+  "tags": [
+   "الحب",
+   "المناجاة",
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m02-muhibbin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m02-muhibbin.jpg"
+ },
+ {
+  "id": "v_m03-khaifin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة الخائفين",
+  "tags": [
+   "الخوف والرجاء",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m03-khaifin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m03-khaifin.jpg"
+ },
+ {
+  "id": "v_m04-raghibin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة الراغبين",
+  "tags": [
+   "الخوف والرجاء",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m04-raghibin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m04-raghibin.jpg"
+ },
+ {
+  "id": "v_m05-shakirin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة الشاكرين",
+  "tags": [
+   "الشكر",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m05-shakirin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m05-shakirin.jpg"
+ },
+ {
+  "id": "v_m06-muridin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة المريدين",
+  "tags": [
+   "الهداية",
+   "القرب من الله",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m06-muridin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m06-muridin.jpg"
+ },
+ {
+  "id": "v_z01-ashura",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة عاشوراء",
+  "tags": [
+   "الإمام الحسين",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z01-ashura.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z01-ashura.jpg"
+ },
+ {
+  "id": "v_z03-warith",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة وارث",
+  "tags": [
+   "الإمام الحسين",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z03-warith.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z03-warith.jpg"
+ },
+ {
+  "id": "v_z04-alyasin",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة آل يس",
+  "tags": [
+   "الإمام المهدي",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z04-alyasin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z04-alyasin.jpg"
+ },
+ {
+  "id": "v_z05-aminallah",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة أمين الله",
+  "tags": [
+   "أمير المؤمنين",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z05-aminallah.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z05-aminallah.jpg"
+ },
+ {
+  "id": "v_z06-arbain",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة الأربعين",
+  "tags": [
+   "الإمام الحسين",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z06-arbain.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z06-arbain.jpg"
+ },
+ {
+  "id": "v_z07-jamia",
+  "type": "video",
+  "category": "duas",
+  "title": "الزيارة الجامعة الكبيرة",
+  "tags": [
+   "أهل البيت",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z07-jamia.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z07-jamia.jpg"
+ },
+ {
+  "id": "v_01-qarib",
+  "type": "video",
+  "category": "ayat",
+  "title": "وإذا سألك عبادي عني فإني قريب",
+  "tags": [
+   "الدعاء",
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/01-qarib.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/01-qarib.jpg"
+ },
+ {
+  "id": "v_02-tatmain",
+  "type": "video",
+  "category": "ayat",
+  "title": "ألا بذكر الله تطمئن القلوب",
+  "tags": [
+   "الذكر",
+   "الطمأنينة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/02-tatmain.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/02-tatmain.jpg"
+ },
+ {
+  "id": "v_03-yusr",
+  "type": "video",
+  "category": "ayat",
+  "title": "فإن مع العسر يسرا",
+  "tags": [
+   "اليسر والفرج",
+   "الصبر"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/03-yusr.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/03-yusr.jpg"
+ },
+ {
+  "id": "v_04-khalq",
+  "type": "video",
+  "category": "ayat",
+  "title": "إن في خلق السماوات والأرض",
+  "tags": [
+   "التفكر",
+   "الذكر"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/04-khalq.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/04-khalq.jpg"
+ },
+ {
+  "id": "v_05-la-taqnatu",
+  "type": "video",
+  "category": "ayat",
+  "title": "لا تقنطوا من رحمة الله",
+  "tags": [
+   "الرحمة",
+   "التوبة",
+   "الأمل"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/05-la-taqnatu.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/05-la-taqnatu.jpg"
+ },
+ {
+  "id": "v_06-salawat",
+  "type": "video",
+  "category": "ayat",
+  "title": "إن الله وملائكته يصلون على النبي",
+  "tags": [
+   "الصلاة على النبي",
+   "أهل البيت"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/06-salawat.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/06-salawat.jpg"
+ },
+ {
+  "id": "v_07-fadhkuruni",
+  "type": "video",
+  "category": "ayat",
+  "title": "فاذكروني أذكركم",
+  "tags": [
+   "الذكر",
+   "الشكر",
+   "الصبر"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/07-fadhkuruni.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/07-fadhkuruni.jpg"
+ },
+ {
+  "id": "v_08-uduni",
+  "type": "video",
+  "category": "ayat",
+  "title": "ادعوني أستجب لكم",
+  "tags": [
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/08-uduni.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/08-uduni.jpg"
+ },
+ {
+  "id": "v_09-kursi",
+  "type": "video",
+  "category": "ayat",
+  "title": "آية الكرسي",
+  "tags": [
+   "التوحيد",
+   "الحفظ والأمان"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/09-kursi.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/09-kursi.jpg"
+ },
+ {
+  "id": "v_10-ikhlas",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة الإخلاص",
+  "tags": [
+   "التوحيد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/10-ikhlas.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/10-ikhlas.jpg"
+ },
+ {
+  "id": "v_11-asr",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة العصر",
+  "tags": [
+   "الصبر",
+   "العمل الصالح"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/11-asr.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/11-asr.jpg"
+ },
+ {
+  "id": "v_12-qadr",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة القدر",
+  "tags": [
+   "ليلة القدر",
+   "رمضان"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/12-qadr.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/12-qadr.jpg"
+ },
+ {
+  "id": "v_13-dhannun",
+  "type": "video",
+  "category": "ayat",
+  "title": "لا إله إلا أنت سبحانك",
+  "tags": [
+   "الدعاء",
+   "التوبة",
+   "اليسر والفرج"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/13-dhannun.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/13-dhannun.jpg"
+ },
+ {
+  "id": "v_14-shakartum",
+  "type": "video",
+  "category": "ayat",
+  "title": "لئن شكرتم لأزيدنكم",
+  "tags": [
+   "الشكر",
+   "الرزق"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/14-shakartum.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/14-shakartum.jpg"
+ },
+ {
+  "id": "v_15-mawadda",
+  "type": "video",
+  "category": "ayat",
+  "title": "قل لا أسألكم عليه أجرا إلا المودة في القربى",
+  "tags": [
+   "أهل البيت",
+   "الحب"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/15-mawadda.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/15-mawadda.jpg"
+ },
+ {
+  "id": "v_16-wilaya",
+  "type": "video",
+  "category": "ayat",
+  "title": "إنما وليكم الله ورسوله",
+  "tags": [
+   "أهل البيت",
+   "أمير المؤمنين"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/16-wilaya.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/16-wilaya.jpg"
+ },
+ {
+  "id": "v_17-fatiha",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة الفاتحة",
+  "tags": [
+   "الهداية",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/17-fatiha.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/17-fatiha.jpg"
+ },
+ {
+  "id": "v_18-kawthar",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة الكوثر",
+  "tags": [
+   "أهل البيت",
+   "الشكر"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/18-kawthar.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/18-kawthar.jpg"
+ },
+ {
+  "id": "v_19-nasr",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة النصر",
+  "tags": [
+   "الاستغفار",
+   "التوبة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/19-nasr.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/19-nasr.jpg"
+ },
+ {
+  "id": "v_20-falaq",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة الفلق",
+  "tags": [
+   "الحفظ والأمان"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/20-falaq.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/20-falaq.jpg"
+ },
+ {
+  "id": "v_21-nas",
+  "type": "video",
+  "category": "ayat",
+  "title": "سورة الناس",
+  "tags": [
+   "الحفظ والأمان"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/21-nas.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/21-nas.jpg"
+ },
+ {
+  "id": "v_22-rabbana-atina",
+  "type": "video",
+  "category": "ayat",
+  "title": "ربنا آتنا في الدنيا حسنة",
+  "tags": [
+   "الدعاء",
+   "الجنة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/22-rabbana-atina.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/22-rabbana-atina.jpg"
+ },
+ {
+  "id": "v_23-la-tuzigh",
+  "type": "video",
+  "category": "ayat",
+  "title": "ربنا لا تزغ قلوبنا",
+  "tags": [
+   "الدعاء",
+   "الهداية"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/23-la-tuzigh.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/23-la-tuzigh.jpg"
+ },
+ {
+  "id": "v_24-ishrah",
+  "type": "video",
+  "category": "ayat",
+  "title": "رب اشرح لي صدري",
+  "tags": [
+   "الدعاء",
+   "اليسر والفرج"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/24-ishrah.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/24-ishrah.jpg"
+ },
+ {
+  "id": "v_25-walidayn",
+  "type": "video",
+  "category": "ayat",
+  "title": "وقل رب ارحمهما كما ربياني صغيرا",
+  "tags": [
+   "الوالدين",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/25-walidayn.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/25-walidayn.jpg"
+ },
+ {
+  "id": "v_26-yutimuna",
+  "type": "video",
+  "category": "ayat",
+  "title": "ويطعمون الطعام على حبه",
+  "tags": [
+   "أهل البيت",
+   "الصدقة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/26-yutimuna.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/26-yutimuna.jpg"
+ },
+ {
+  "id": "v_27-fan",
+  "type": "video",
+  "category": "ayat",
+  "title": "كل من عليها فان",
+  "tags": [
+   "الموت",
+   "الآخرة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/27-fan.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/27-fan.jpg"
+ },
+ {
+  "id": "v_28-aqrab",
+  "type": "video",
+  "category": "ayat",
+  "title": "ونحن أقرب إليه من حبل الوريد",
+  "tags": [
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/28-aqrab.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/28-aqrab.jpg"
+ },
+ {
+  "id": "v_29-rajiun",
+  "type": "video",
+  "category": "ayat",
+  "title": "إنا لله وإنا إليه راجعون",
+  "tags": [
+   "الصبر",
+   "الموت"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/29-rajiun.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/29-rajiun.jpg"
+ },
+ {
+  "id": "v_30-hasbuna",
+  "type": "video",
+  "category": "ayat",
+  "title": "حسبنا الله ونعم الوكيل",
+  "tags": [
+   "التوكل"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/30-hasbuna.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/30-hasbuna.jpg"
+ },
+ {
+  "id": "v_31-nur",
+  "type": "video",
+  "category": "ayat",
+  "title": "الله نور السماوات والأرض",
+  "tags": [
+   "النور",
+   "التفكر"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/31-nur.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/31-nur.jpg"
+ },
+ {
+  "id": "v_32-salati",
+  "type": "video",
+  "category": "ayat",
+  "title": "إن صلاتي ونسكي ومحياي ومماتي لله",
+  "tags": [
+   "الصلاة",
+   "الموت"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/32-salati.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/32-salati.jpg"
+ }
+]
