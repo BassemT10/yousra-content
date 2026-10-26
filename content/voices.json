@@ -1,5 +1,21 @@
 {
- "adhan": [],
+ "adhan": [
+  {
+   "name": "الأذان الأول",
+   "url": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-1.mp3",
+   "short": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-1-short.mp3"
+  },
+  {
+   "name": "الأذان الثاني",
+   "url": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-2.mp3",
+   "short": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-2-short.mp3"
+  },
+  {
+   "name": "الأذان الثالث",
+   "url": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-3.mp3",
+   "short": "https://bassemt10.github.io/yousra-content/audio/adhan/adhan-3-short.mp3"
+  }
+ ],
  "quran": [
   {
    "name": "عبد الباسط عبد الصمد (مرتّل)",
