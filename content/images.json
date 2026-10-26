@@ -136,6 +136,233 @@
   "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d12-tawassul.jpg"
  },
  {
+  "id": "v_d14-day-sat",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم السبت",
+  "tags": [
+   "أدعية الأيام",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d14-day-sat.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d14-day-sat.jpg"
+ },
+ {
+  "id": "v_d15-day-sun",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الأحد",
+  "tags": [
+   "أدعية الأيام",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d15-day-sun.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d15-day-sun.jpg"
+ },
+ {
+  "id": "v_d16-day-mon",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الاثنين",
+  "tags": [
+   "أدعية الأيام",
+   "الحمد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d16-day-mon.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d16-day-mon.jpg"
+ },
+ {
+  "id": "v_d17-day-tue",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الثلاثاء",
+  "tags": [
+   "أدعية الأيام",
+   "الحمد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d17-day-tue.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d17-day-tue.jpg"
+ },
+ {
+  "id": "v_d18-day-wed",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الأربعاء",
+  "tags": [
+   "أدعية الأيام",
+   "الحمد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d18-day-wed.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d18-day-wed.jpg"
+ },
+ {
+  "id": "v_d19-day-thu",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الخميس",
+  "tags": [
+   "أدعية الأيام",
+   "النور"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d19-day-thu.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d19-day-thu.jpg"
+ },
+ {
+  "id": "v_d20-day-fri",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يوم الجمعة",
+  "tags": [
+   "أدعية الأيام",
+   "الأمل"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d20-day-fri.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d20-day-fri.jpg"
+ },
+ {
+  "id": "v_d21-sahar",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء السحر",
+  "tags": [
+   "رمضان",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d21-sahar.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d21-sahar.jpg"
+ },
+ {
+  "id": "v_d22-jawshan-saghir",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الجوشن الصغير",
+  "tags": [
+   "الحفظ والأمان",
+   "اليسر والفرج"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d22-jawshan-saghir.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d22-jawshan-saghir.jpg"
+ },
+ {
+  "id": "v_d23-mashlul",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء المشلول",
+  "tags": [
+   "الشفاء",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d23-mashlul.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d23-mashlul.jpg"
+ },
+ {
+  "id": "v_d24-arafa",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء عرفة",
+  "tags": [
+   "الحمد",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d24-arafa.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d24-arafa.jpg"
+ },
+ {
+  "id": "v_d25-hazin",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء الحزين",
+  "tags": [
+   "اليسر والفرج",
+   "القرب من الله"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d25-hazin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d25-hazin.jpg"
+ },
+ {
+  "id": "v_d26-mujir",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء المجير",
+  "tags": [
+   "رمضان",
+   "الحفظ والأمان"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d26-mujir.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d26-mujir.jpg"
+ },
+ {
+  "id": "v_d27-adila",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء العديلة",
+  "tags": [
+   "التوحيد",
+   "الموت"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d27-adila.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d27-adila.jpg"
+ },
+ {
+  "id": "v_d28-tawba",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء التوبة",
+  "tags": [
+   "التوبة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d28-tawba.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d28-tawba.jpg"
+ },
+ {
+  "id": "v_d29-yaudati",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يا عدّتي",
+  "tags": [
+   "اليسر والفرج",
+   "الدعاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d29-yaudati.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d29-yaudati.jpg"
+ },
+ {
+  "id": "v_d30-alqama",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء علقمة",
+  "tags": [
+   "الإمام الحسين",
+   "اليسر والفرج"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d30-alqama.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d30-alqama.jpg"
+ },
+ {
+  "id": "v_d31-nur",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء النور",
+  "tags": [
+   "النور",
+   "الشفاء"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d31-nur.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d31-nur.jpg"
+ },
+ {
+  "id": "v_d32-yastashir",
+  "type": "video",
+  "category": "duas",
+  "title": "دعاء يستشير",
+  "tags": [
+   "التوحيد",
+   "الحمد"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/d32-yastashir.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/d32-yastashir.jpg"
+ },
+ {
   "id": "v_m01-taibin",
   "type": "video",
   "category": "duas",
@@ -210,6 +437,66 @@
   "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m06-muridin.jpg"
  },
  {
+  "id": "v_m07-shakin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة الشاكين",
+  "tags": [
+   "التوبة",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m07-shakin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m07-shakin.jpg"
+ },
+ {
+  "id": "v_m08-mutiin",
+  "type": "video",
+  "category": "duas",
+  "title": "مناجاة المطيعين لله",
+  "tags": [
+   "الطاعة",
+   "المناجاة"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/m08-mutiin.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/m08-mutiin.jpg"
+ },
+ {
+  "id": "v_t03-asr",
+  "type": "video",
+  "category": "duas",
+  "title": "تعقيب صلاة العصر",
+  "tags": [
+   "التعقيبات",
+   "الاستغفار"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/t03-asr.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/t03-asr.jpg"
+ },
+ {
+  "id": "v_t04-maghrib",
+  "type": "video",
+  "category": "duas",
+  "title": "تعقيب صلاة المغرب",
+  "tags": [
+   "التعقيبات",
+   "الصلاة على النبي"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/t04-maghrib.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/t04-maghrib.jpg"
+ },
+ {
+  "id": "v_t05-isha",
+  "type": "video",
+  "category": "duas",
+  "title": "تعقيب صلاة العشاء",
+  "tags": [
+   "التعقيبات",
+   "الرزق"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/t05-isha.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/t05-isha.jpg"
+ },
+ {
   "id": "v_z01-ashura",
   "type": "video",
   "category": "duas",
@@ -280,6 +567,127 @@
   ],
   "asset": "https://bassemt10.github.io/yousra-content/media/videos/z07-jamia.mp4",
   "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z07-jamia.jpg"
+ },
+ {
+  "id": "v_z08-zahra",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة السيدة الزهراء",
+  "tags": [
+   "السيدة الزهراء",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z08-zahra.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z08-zahra.jpg"
+ },
+ {
+  "id": "v_z10-baqi",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة أئمة البقيع",
+  "tags": [
+   "أهل البيت",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z10-baqi.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z10-baqi.jpg"
+ },
+ {
+  "id": "v_z11-rajabiya",
+  "type": "video",
+  "category": "duas",
+  "title": "الزيارة الرجبية",
+  "tags": [
+   "أهل البيت",
+   "الزيارات"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z11-rajabiya.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z11-rajabiya.jpg"
+ },
+ {
+  "id": "v_z12-day-sat",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم السبت",
+  "tags": [
+   "النبي محمد",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z12-day-sat.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z12-day-sat.jpg"
+ },
+ {
+  "id": "v_z13-day-sun",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الأحد",
+  "tags": [
+   "أمير المؤمنين",
+   "السيدة الزهراء",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z13-day-sun.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z13-day-sun.jpg"
+ },
+ {
+  "id": "v_z14-day-mon",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الاثنين",
+  "tags": [
+   "الإمام الحسين",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z14-day-mon.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z14-day-mon.jpg"
+ },
+ {
+  "id": "v_z15-day-tue",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الثلاثاء",
+  "tags": [
+   "أهل البيت",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z15-day-tue.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z15-day-tue.jpg"
+ },
+ {
+  "id": "v_z16-day-wed",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الأربعاء",
+  "tags": [
+   "أهل البيت",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z16-day-wed.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z16-day-wed.jpg"
+ },
+ {
+  "id": "v_z17-day-thu",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الخميس",
+  "tags": [
+   "أهل البيت",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z17-day-thu.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z17-day-thu.jpg"
+ },
+ {
+  "id": "v_z18-day-fri",
+  "type": "video",
+  "category": "duas",
+  "title": "زيارة يوم الجمعة",
+  "tags": [
+   "الإمام المهدي",
+   "زيارات الأيام"
+  ],
+  "asset": "https://bassemt10.github.io/yousra-content/media/videos/z18-day-fri.mp4",
+  "thumb": "https://bassemt10.github.io/yousra-content/media/videos/z18-day-fri.jpg"
  },
  {
   "id": "v_01-qarib",
